@@ -1,0 +1,92 @@
+.main{
+    width: 100%;
+    margin-top: 20px;
+    height: 350px;
+}
+.carousel{
+    width: 60%;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+}
+.prevbtn,.nextbtn{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: max-content; 
+    position: absolute;
+    z-index: 200;
+    
+}
+.prevbtn{
+   left: 0px;
+}
+.nextbtn{
+    right: 0px;
+}
+.prevbtn img,.nextbtn img{
+    height: 50px;
+    background-color: #ffffff47;
+    border-radius: 5px;
+}
+.prevbtn img:hover,.nextbtn img:hover{
+    background-color: #f4af3f47;
+    cursor: pointer;
+}
+.nextbtn img{
+    transform: rotate(180deg);
+}
+.carousel_items{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: 0.7s ease-out;
+    scroll-behavior:smooth ;
+    margin: auto;     
+}
+.carousel_items img{
+    flex: 1;
+    width: 100%;
+}
+ 
+.active{
+    background-color: rgb(83, 83, 83) !important;
+}
+.indicators{
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+.indicator{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(114, 114, 114, 0.751);
+    margin-right: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .carousel{
+        width: 95%;
+        height: 250px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+         
+    }
+    .carousel img{
+        border-radius: 20px;
+    }
+
+    .prevbtn,.nextbtn{
+        display: none;
+    }
+}
