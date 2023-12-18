@@ -1,0 +1,42 @@
+.product{
+    width: 200px;
+    height:350px;
+    border-radius: 8px;
+    color: black;
+    text-decoration: none;
+    text-align: left;
+    display: inline-block;
+}
+.image{
+    width: 98%;
+    height: 250px;
+    display: block;
+    margin: auto;
+    border-radius: inherit;
+}
+.title{
+    font-size: var(--font-size-mini);
+    display: block;
+    margin: 0px;
+    margin-bottom: 2px;
+}
+.color{
+    color: var(--color-dimgray-100);
+    font-size: var(--font-size-xs);
+    display: block;
+}
+.price{
+    font-size: var(--font-size-mini);
+    margin-right: 12px;
+}
+.mrp{
+    font-size: var(--font-size-mini);
+    text-decoration: line-through;
+    margin-right: 12px;
+    color: var(--color-dimgray-200);
+
+}
+.discount{
+    font-size: var(--font-size-smi);
+    color: var(--color-darkgreen);
+}

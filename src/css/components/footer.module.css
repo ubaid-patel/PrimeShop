@@ -1,0 +1,22 @@
+.footer{
+    display: flex;
+    width: 100%;
+    background-color: #D2D2D2;
+    padding-left: 50px;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+}
+.section{
+    flex: 1;
+}
+.title{
+    font-size:var(--font-size-mini) ;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.item{
+    font-size:var(--font-size-mini) ;
+    display: block;
+    text-decoration: none;
+    color: black;
+}

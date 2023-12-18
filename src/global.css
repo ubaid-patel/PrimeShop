@@ -2,6 +2,7 @@
 body {
   margin: 0;
   line-height: normal;
+  font-family: var(--font-roboto);
 }
 :root {
   /* fonts */
@@ -28,4 +29,7 @@ body {
   --br-8xs: 5px;
   --br-2xl: 21px;
   --br-sm: 14px;
+}
+a{
+  text-decoration: none;
 }

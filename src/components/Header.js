@@ -1,19 +1,20 @@
-import {logo} from '../../public/logo.jpg'
-import {search} from '../../public/search.jpg'
-import {accountCircle} from '../../public/account_circle.jpg'
-import {cart} from '../../public/shopping_cart.jpg'
-import {styles} from '../css/components/header.module.css'
+import logo from '../assets/logo.png'
+import search from '../assets/search.svg'
+import accountCircle from '../assets/account_circle.jpg'
+import cart from '../assets/shopping_cart.jpg'
+import styles from '../css/components/header.module.css'
 
-export default Header = ()=>{
+function Header (){
     return(
-        <header id={styles.header}>
-            <img src={logo} id={styles.logo}/>
-            <div id={styles.searchBar}>
-                <img src={search} id={styles.search}/>
-                <input type="text" id={styles.searchInput}/>
+        <header className={styles.header}>
+            <img src={logo} className={styles.logo}/>
+            <div className={styles.searchBar}>
+                <img src={search} className={styles.search}/>
+                <input type="text" className={styles.searchInput}/>
             </div>
-            <img src={accountCircle} id={styles.accountCircle}/>
-            <img src={cart} id={styles.cart}/>
+            <img src={accountCircle} className={styles.accountCircle}/>
+            <img src={cart} className={styles.cart}/>
         </header>
     )
 }
+export default Header

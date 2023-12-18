@@ -1,10 +1,8 @@
 import React, { Component, useEffect, useRef, useState } from "react";
 import styles from '../css/components/carousel.module.css'
-import img1 from '../../public/carou1.jpg'
-import img2 from '../../public/carou2.jpg'
-import img3 from '../../public/carou3.jpg'
-import img4 from '../../public/carou4.jpg'
-import carouselBtn from '../../public/arrow-back-ios-new.svg';
+import carouselBtn from '../assets/arrow-back-ios-new.svg';
+import getCarousel from "../api-calls/getCarousel";
+import { Link } from "react-router-dom";
 
 function Carousel() {
     const carouselItemsRef = useRef(null);
@@ -13,29 +11,29 @@ function Carousel() {
     const indicatorsRef = useRef(null);
     const offset = useRef(0);
     const autoScroll = useRef({ done: false, id: null })
-    const images = [img1, img2, img3,img4];
+    const items = getCarousel();
     const touchRef = useRef(0)
 
 
 
     function scroll(to) {
-        const totalImages = images.length;
+        const totalitems = items.length;
         const nextindex = index.current + to;
         let nextindi = indicator.current + to;
-        if(autoScroll.current.done == false){
+        if (autoScroll.current.done == false) {
             clearTimeout(autoScroll.current.id);
             autoScroll.current.done = true;
             autoScroll.current.id = null;
         }
-        if (nextindi > totalImages - 1) {
+        if (nextindi > totalitems - 1) {
             nextindi = 0;
         } else if (nextindi < 0) {
-            nextindi = totalImages - 1;
+            nextindi = totalitems - 1;
         }
-        if (nextindex > totalImages - 1 || nextindex < 0) {
+        if (nextindex > totalitems - 1 || nextindex < 0) {
             new Promise((resolve, reject) => {
                 if (nextindex < 0) {
-                    let elem = carouselItemsRef.current.children[totalImages - 1];
+                    let elem = carouselItemsRef.current.children[totalitems - 1];
                     let curroffset = elem.offsetWidth;
                     elem.remove();
                     offset.current -= curroffset;
@@ -47,7 +45,7 @@ function Carousel() {
                     let curroffset = elem.offsetWidth;
                     elem.remove();
                     offset.current += curroffset;
-                    carouselItemsRef.current.insertBefore(elem, carouselItemsRef.current.children[totalImages - 1])
+                    carouselItemsRef.current.insertBefore(elem, carouselItemsRef.current.children[totalitems - 1])
                     carouselItemsRef.current.style = `transition:0s;transform: translateX(${offset.current}px)`
                     resolve(-carouselItemsRef.current.children[index.current - 1].offsetWidth);
                 }
@@ -59,7 +57,7 @@ function Carousel() {
                         indicatorsRef.current.children[nextindi].classList.add(styles.active);
                         indicator.current = nextindi;
                         carouselItemsRef.current.style = `transform: translateX(${offset.current}px)`
-                        nextImage();
+                        // nextImage();
                     }, 10)
                 }
             )
@@ -77,38 +75,38 @@ function Carousel() {
             indicator.current = nextindi;
             carouselItemsRef.current.style = `transform: translateX(${offset.current}px)`
             index.current += to;
-            nextImage();
+            // nextImage();
         }
 
     }
     function nextImage() {
         autoScroll.current.done = false;
-       if(autoScroll.current.id === null){
-        autoScroll.current.id =  setTimeout(() => {
-            scroll(1);
-            autoScroll.current.done = true;
-        }, 3000)
-       }
+        if (autoScroll.current.id === null) {
+            autoScroll.current.id = setTimeout(() => {
+                scroll(1);
+                autoScroll.current.done = true;
+            }, 3000)
+        }
     }
 
-    useEffect(()=>{
-        nextImage();
-        return ()=>clearTimeout(autoScroll.current.id);
-    },[])
+    useEffect(() => {
+        // nextImage();
+        return () => clearTimeout(autoScroll.current.id);
+    }, [])
 
-    function swipe(event){
+    function swipe(event) {
         const x = touchRef.current[0].clientX - event.changedTouches[0].clientX;
         const y = Math.abs(touchRef.current[0].clientY - event.changedTouches[0].clientY);
-       
-        if(x > 10 && y < 50){
+
+        if (x > 10 && y < 50) {
             scroll(1)
-        }else if(x < -10 && y < 50){
+        } else if (x < -10 && y < 50) {
             scroll(-1)
         }
     }
     return (
         <div className={styles.main}>
-            <div className={styles.carousel} onTouchStart={(e)=>{touchRef.current = e.changedTouches}} onTouchEnd={swipe}>
+            <div className={styles.carousel} onTouchStart={(e) => { touchRef.current = e.changedTouches }} onTouchEnd={swipe}>
                 <div className={styles.prevbtn}>
                     <img src={carouselBtn} onClick={() => { scroll(-1) }} />
                 </div>
@@ -117,7 +115,7 @@ function Carousel() {
                 </div>
                 <div className={styles.carousel_items} ref={carouselItemsRef}>
                     {
-                        images.map((img) => <img src={img} />)
+                        items.map((item) =><img src={item.img} />)
                     }
                 </div>
 
@@ -125,8 +123,8 @@ function Carousel() {
             <div className={styles.indicators} ref={indicatorsRef}>
                 {
 
-                    images.map((a,index) => (index === 0)?<div className={`${styles.indicator} ${styles.active}`} />:
-                    <div className={styles.indicator} />)
+                    items.map((a, index) => (index === 0) ? <div className={`${styles.indicator} ${styles.active}`} /> :
+                        <div className={styles.indicator} />)
                 }
             </div>
         </div>
