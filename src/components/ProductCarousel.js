@@ -1,4 +1,4 @@
-import arrowImg from '../assets/arrow-back-ios-new.svg'
+const  arrowImg = '/arrow-back-ios-new.svg';
 import styles from '../css/components/product_carousel.module.css'
 import ProductCard from './ProductCard'
 function ProductCarousel({ items,name }) {

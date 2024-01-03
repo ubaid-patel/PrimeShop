@@ -2,7 +2,7 @@ import styles from '../css/components/product_card.module.css'
 import { Link } from 'react-router-dom'
 function ProductCard({ details }) {
     return (
-        <Link to={'product/'+details.pid}>
+        <Link to={'/product/'+details.pid}>
             <div className={styles.product}>
                 <img className={styles.image} src={details.colors[0].pics[0]} />
                 <p className={styles.title}>{details.title}</p>

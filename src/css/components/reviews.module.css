@@ -1,0 +1,13 @@
+.reviews{
+    width: 100%;
+    display: flex;
+}
+.top_reviews{
+
+}
+.summary{
+
+}
+.average_rating{
+    margin-right: 50px;
+}

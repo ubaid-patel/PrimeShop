@@ -5,13 +5,14 @@ const productDetails = {
     price:990,
     mrp:1990,
     colors:[
-        {name:"Green",pics:["carou1.jpg"]},
-        {name:"Red",pics:["carou1.jpg"]}
+        {name:"Green",pics:["/carou1.jpg"]},
+        {name:"Red",pics:["/carou1.jpg"]}
     ],
     sizes:[7,"M",],
     delivery:0,
 }
 const allProducts = [productDetails,productDetails,productDetails,productDetails,productDetails,productDetails,productDetails,productDetails]
+
 function getRecomendations(type, data) {
     switch (type.toLowerCase()) {
         case "featured":

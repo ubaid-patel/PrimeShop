@@ -1,8 +1,8 @@
 import React, { Component, useEffect, useRef, useState } from "react";
 import styles from '../css/components/carousel.module.css'
-import carouselBtn from '../assets/arrow-back-ios-new.svg';
 import getCarousel from "../api-calls/getCarousel";
 import { Link } from "react-router-dom";
+const carouselBtn = 'arrow-back-ios-new.svg';
 
 function Carousel() {
     const carouselItemsRef = useRef(null);

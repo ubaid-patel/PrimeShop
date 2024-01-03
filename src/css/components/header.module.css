@@ -9,7 +9,6 @@
     padding: 0 40px; /* Combine padding values into shorthand */
     display: flex; /* Use flexbox to align items horizontally */
     align-items: center; /* Center items vertically */
-    margin-bottom: 60px;
   }
   
   .searchBar {
@@ -43,6 +42,7 @@
   
   .logo {
     height: 68px;
+    cursor: pointer;
   }
   
   .accountCircle,
