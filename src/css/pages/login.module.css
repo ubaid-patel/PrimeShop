@@ -1,0 +1,96 @@
+.back{
+    width: 50%;
+    height: 400px;
+    background-color: green;
+    background-image: url("http://localhost:3000/back.jpg");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    padding-top: 25px;
+    margin: auto;
+    position: absolute;
+    left: 26%;
+    top:70px;
+}
+.main{
+    border-radius: 30px;
+    width: 450px;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); 
+    border: 1px solid rgba(255, 255, 255, 0.728);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.form input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    position: relative;
+}
+.form{
+    display: block;
+    width: 70%;
+    margin: auto;
+    font-size: 1.2rem;
+    padding-top: 30px;
+}
+.input{
+    position: relative;
+    height: 50px;
+    text-align: left;    
+    margin-bottom: 25px;
+}
+.input span{
+    display: block;
+    transform: translateY(25px);
+    transition: 0.3s;
+    width: max-content;
+    height: 50%;
+}
+.moveup{
+    transform: translateY(0px) !important;
+    font-size: 0.9rem;
+}
+.input input{
+ position:relative;
+ background-color: rgba(255, 255, 255, 0);
+ width: 100%;
+ font-size: 1.2rem;
+}
+.form button{
+    font-size: 1.2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px 6px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.forgot,.link{
+    color: #508BFF;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 500;
+}
+.forgot{
+    text-align: right;
+}
+.form:last-child input{
+    margin-bottom: 0px;
+}
+.form input:-webkit-autofill,
+.form input:-webkit-autofill:hover, 
+.form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000000;
+  -webkit-box-shadow: 0 0 0px 40rem rgb(255, 255, 255) inset;
+}
+
+@media only screen and (max-width: 600px) {
+    .main{
+        width: 92%;
+    }
+ }

@@ -1,0 +1,43 @@
+:root {
+    --commongap: 95px;
+  }
+  
+  .header {
+    max-width: 87%;
+    box-sizing: border-box;
+    height: 80px;
+    padding: 0 40px; /* Combine padding values into shorthand */
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Center items vertically */
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    margin-left: 140px;
+  }
+
+  
+  .logo {
+    flex: 1;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+  }
+  .logo img{
+    height: 58px;
+    align-self: center;
+
+  }
+
+  .secure {
+    flex: 1;
+    display: block;
+   
+  }
+  .secure img{
+    height: 45px;
+  }
+  .title{
+    flex: 1;
+    display: block;
+    font-weight: 400;
+  }

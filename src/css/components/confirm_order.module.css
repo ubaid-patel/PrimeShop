@@ -1,0 +1,27 @@
+.confirm_order{
+    overflow: hidden;
+    width: 90%;
+    height: 200px;
+    margin: 0px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 8px;
+}
+.confirm_order h2{
+    color: green;
+    font-weight: 300;
+    font-size: larger;
+    border-bottom: 1px solid black;
+}
+.confirm_order button{
+    height: 30px;
+    background-color: rgb(50, 107, 0);
+    width: max-content;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: larger;
+}

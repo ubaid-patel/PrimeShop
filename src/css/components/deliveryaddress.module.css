@@ -1,0 +1,67 @@
+.deilvery_address{
+    overflow: hidden;
+    width: 90%;
+    margin: 0px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.deilvery_address h2{
+    font-weight: 300;
+    font-size: larger;
+    border-bottom: 1px solid black;
+}
+.address{
+    margin-bottom: 20px;
+}
+.address_radio{
+    display: inline;
+}
+.name{
+    display: inline;
+    font-weight: 500;
+}
+.edit_button{
+    margin-left: 30px;
+    padding: 5px 2px;
+    border-radius: 0px;
+    color: rgb(4, 93, 125);
+    background-color: white;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+.add_address{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    color: rgb(4, 93, 125);
+    background-color: white;
+}
+.add_address img{
+    display: block;
+    height: 25px;
+}
+.add_address span{
+    display: block;
+}
+.use_address{
+    width: 100%;
+    background-color: rgb(166, 159, 149);
+    height: 50px;
+    position: relative;   
+ 
+}
+.use_address button{
+    height: 30px;
+    background-color: rgb(255, 227, 16);
+    width: max-content;
+    position: absolute;
+    outline: none;
+    border: none;
+    bottom: 5px;
+    left: 5px;
+    border-radius: 5px;
+}

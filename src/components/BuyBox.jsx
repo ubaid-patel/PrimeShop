@@ -1,5 +1,7 @@
+import { useNavigate } from 'react-router-dom'
 import styles from '../css/components/buybox.module.css'
 function BuyBox() {
+    const nav = useNavigate()
     let details = { price: 1999, stock: 900, seller: "", delivery: { charges: null, time: 5, validity: 6, location: "Ubaid Patel Gola k Shahabad 585228" } }
     return (
         <div className={styles.buy_box}>
@@ -27,7 +29,7 @@ function BuyBox() {
                 </select>
             </div>
             <button className={styles.add_cart}>Add to Cart</button>
-            <button className={styles.buy_now}>Buy Now</button>
+            <button className={styles.buy_now} onClick={()=>nav("/checkout/sss")}>Buy Now</button>
             <div className={styles.secure_transaction}>
                 <img src={'/lock.svg'}></img> Secure Transcation
             </div>

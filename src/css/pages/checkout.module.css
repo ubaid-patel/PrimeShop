@@ -1,0 +1,11 @@
+.checkout{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+.delivery_address{}
+.delivery_address h1,.payment_methods h1{
+    font-weight: 400;
+    font-size: x-large;
+    color: rgb(188, 91, 6);
+}
