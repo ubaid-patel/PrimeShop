@@ -15,7 +15,7 @@ function Header (){
                 <input type="text" className={styles.searchInput}/>
             </div>
             <img src={accountCircle} className={styles.accountCircle}/>
-            <img src={cart} className={styles.cart}/>
+            <img src={cart} className={styles.cart} onClick={()=>nav("/cart")}/>
         </header>
     )
 }
