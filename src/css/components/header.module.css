@@ -9,9 +9,11 @@
     padding: 0 40px; /* Combine padding values into shorthand */
     display: flex; /* Use flexbox to align items horizontally */
     align-items: center; /* Center items vertically */
+    background-color: white;
   }
   
   .searchBar {
+    position: relative;
     border: 1px solid black;
     height: 40px;
     width: 45%;

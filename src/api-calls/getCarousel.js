@@ -1,4 +1,4 @@
-const img1 = 'maksim-larin-ezdrvzA1hZw-unsplash.jpg';
+const img1 = 'mnz.jpg';
 const img2 = 'carou2.jpg';
 const img3 = 'carou3.jpg';
 const img4 = 'daniel-storek-JM-qKEd1GMI-unsplash.jpg';

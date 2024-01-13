@@ -8,10 +8,12 @@ import styles from '../css/pages/product.module.css'
 import { useParams } from "react-router-dom"
 import ProductCarousel from "../components/ProductCarousel"
 import Reviews from "../components/Reviews"
+import Header from "../components/Header"
 function Product() {
     const pid = useParams();
     return (
         <React.Fragment>
+            <Header/>
             <div className={styles.product}>
             <ImageGallery />
             <ProductInfo />

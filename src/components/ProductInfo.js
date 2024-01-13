@@ -40,8 +40,8 @@ function ProductInfo() {
                 }
             </div>
             <div className={styles.size_heading}>
-                Size:<span className={styles.active_size}>
-                    {activeSize}IN
+                Size: <span className={styles.active_size}>
+                    {activeSize} IN
                 </span>
             </div>
             <div className={styles.sizes}>

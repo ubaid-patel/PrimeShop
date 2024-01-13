@@ -3,6 +3,16 @@
     font-weight: 400;
     font-size: var(--font-size-mid);
 }
+.more{
+    font-weight: 100;
+    font-size: var(--font-size-mini);
+    margin-left: 10px;
+    color: rgb(58, 116, 217);
+    cursor: pointer;
+}
+.more:hover{
+    color: rgba(255, 166, 2, 0.729);
+}
 .main{
     width: 90%;
     margin: auto;
