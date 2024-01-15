@@ -1,0 +1,102 @@
+:root{
+    --option-bdr-clr:rgb(104, 102, 102);
+}
+.main{
+   display: flex; 
+   width: 80%;
+   margin: auto;
+}
+.sidebar{
+    margin-top: 20px;
+    width: 300px;
+    box-sizing: border-box;
+}
+.greetings{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding:10px 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.greetings img{
+    display: block;
+}
+.greetings div span{
+    font-weight: 100;
+    padding-left: 10px;
+}
+.greetings div h3{
+    font-weight: 500;
+    margin: 0px;
+    margin-top: 2px;
+    padding-left: 10px;
+}
+.options{
+    background-color: white;
+    margin-top: 20px;
+    width: 100%;
+}
+.my_orders{
+    padding: 2px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1px solid var(--option-bdr-clr);
+}
+.my_orders img{
+    display: block;
+    margin: auto;
+}
+.my_orders h3{
+    font-weight: 400;
+}
+.option{
+
+}
+.option_head{
+    display: flex;
+    padding: 2px 5px;
+    align-items: center;
+    justify-content: center;
+}
+.option_head img{
+    display: block;
+    margin: auto;
+}
+.option_head h3{
+    font-weight: 400;
+}
+.option_head img{
+    display: block;
+    margin: auto;
+}
+.option_body{
+    border-bottom: 1px solid var(--option-bdr-clr);
+}
+.option_body h3{
+    font-weight: 400;
+    font-weight: medium;
+    padding-left: 30%;
+}
+.option_body h3:hover{
+    background-color: rgba(16, 129, 249, 0.19);
+    color: rgb(52, 113, 245);
+}
+.logout{
+    display: flex;
+    width: 100%;
+}
+.logout img{
+    display: block;
+    margin: auto;
+}
+.logout h3{
+    margin: auto;
+}
+.displayer{
+    width: 100%;
+    background-color: white;
+    margin-left: 20px;
+    margin-top: 20px;
+}

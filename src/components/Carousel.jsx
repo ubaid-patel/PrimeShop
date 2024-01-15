@@ -2,7 +2,7 @@ import React, { Component, useEffect, useRef, useState } from "react";
 import styles from '../css/components/carousel.module.css'
 import getCarousel from "../api-calls/getCarousel";
 import { Link } from "react-router-dom";
-const carouselBtn = 'arrow-back-ios-new.svg';
+const carouselBtn = 'next1.svg';
 
 function Carousel() {
     const carouselItemsRef = useRef(null);

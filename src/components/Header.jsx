@@ -28,7 +28,7 @@ function Header (){
                 <SuggestionBox show={search}/>
             </div>
 
-            <img src={accountCircle} className={styles.accountCircle} onClick={()=>nav("/account")}/>
+            <img src={accountCircle} className={styles.accountCircle} onClick={()=>nav("/account/profile")}/>
             <img src={cart} className={styles.cart} onClick={()=>nav("/cart")}/>
         </header>
     )

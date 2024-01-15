@@ -1,0 +1,75 @@
+.main {
+    background-color: white;
+    padding: 15px;
+}
+
+.add_address {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
+    padding: 3px;
+    margin-bottom: 20px;
+}
+
+.add_address img {
+    padding-right: 5px;
+}
+
+.add_address span {
+    display: block;
+}
+
+.addresses {
+    border: 1px solid black;
+
+}
+
+.address:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+.address{
+    padding: 8px;
+}
+.head{
+    width: 100%;
+    position: relative;
+}
+.head button{
+    display: block;
+    float: left;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    float: right;
+}
+.dot{
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    margin-bottom: 5px;
+}
+.options{
+    display: none;
+    position: absolute;
+    right: 2px;
+}
+.options button{
+    background-color: white;
+    border: none;
+    outline: none;
+    display: block;
+}
+
+.menu:hover + .options{
+    display: flex;
+}
+.body .name{
+    font-size: large;
+    font-weight: 400;
+}
+.body span{
+    font-weight: 600;
+}

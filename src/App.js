@@ -28,7 +28,7 @@ function App() {
       <Route path="/signup" element={<div className={styles.signup}><Signup/></div>} />
       <Route path="/cart" element={<div className={styles.cart}><Cart/></div>} />
       <Route path="/products" element={<div className={styles.products}><Products/></div>} />
-      <Route path="/account" element={<div className={styles.account}><Account/></div>} />
+      <Route path="/account/:page" element={<div className={styles.account}><Account/></div>} />
     </Routes>
   );
 }

@@ -35,7 +35,7 @@
     background-color: #f4af3f47;
     cursor: pointer;
 }
-.nextbtn img{
+.prevbtn img{
     transform: rotate(180deg);
 }
 .carousel_items{

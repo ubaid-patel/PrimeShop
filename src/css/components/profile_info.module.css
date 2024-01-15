@@ -1,0 +1,46 @@
+:root{
+    --form-font-clr:rgb(69, 67, 67);
+}
+.main{
+    width: 100%;
+    background-color: white;
+}
+.main input{
+    background-color: rgba(213, 212, 212, 0.449);
+    color:var(--form-font-clr);
+    padding: 4px;
+    border: 1px solid black;
+    margin-right: 15px;
+}
+::placeholder{
+    color: var(--form-font-clr);
+}
+.personal_info span{
+    color: var(--form-font-clr);
+}
+.personal_info{
+
+}
+.email{
+
+}
+.mobile{
+
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.head h3{
+    font-weight: 400;
+    padding-right: 20px;
+}
+.head button{
+    border: none;
+    outline: none;
+    background-color: rgba(240, 248, 255, 0);
+    color: rgb(3, 104, 255);
+    display: block;
+}
