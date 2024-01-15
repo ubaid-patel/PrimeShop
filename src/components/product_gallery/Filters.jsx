@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../css//components/filter.module.css'
+import styles from '../../css/components/product_gallery/filter.module.css'
 function Filters() {
     const obj = {
         "name": "Brand",

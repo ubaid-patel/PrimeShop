@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from '../css/components/gallery.module.css'
+import styles from '../../css/components/product/gallery.module.css'
 
 function ImageGallery(){
     const images = ['/carou1.jpg','/carou2.jpg','/carou3.jpg','/carou1.jpg','/carou2.jpg','/carou3.jpg','/carou1.jpg','/carou2.jpg','/carou3.jpg']

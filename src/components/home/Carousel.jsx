@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useRef, useState } from "react";
-import styles from '../css/components/carousel.module.css'
-import getCarousel from "../api-calls/getCarousel";
+import styles from '../../css/components/home/carousel.module.css'
+import getCarousel from "../../api-calls/getCarousel";
 import { Link } from "react-router-dom";
 const carouselBtn = 'next1.svg';
 
@@ -12,7 +12,7 @@ function Carousel() {
     const offset = useRef(0);
     const autoScroll = useRef({ done: false, id: null })
     const items = getCarousel();
-    const touchRef = useRef(0)
+    const touchRef = useRef(0);
 
 
 

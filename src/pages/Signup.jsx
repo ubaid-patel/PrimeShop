@@ -1,7 +1,7 @@
 import styles from '../css/pages/signup.module.css'
 import React, { useRef } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/common/Header';
+import Footer from '../components/common/Footer';
 import { useNavigate } from 'react-router-dom';
 
 function animateInputTitle(event) {

@@ -1,14 +1,14 @@
-import ProductCard from "../components/ProductCard"
-import ProductInfo from "../components/ProductInfo"
-import ImageGallery from "../components/ImageGallery"
+import ProductCard from "../components/common/ProductCard"
+import ProductInfo from "../components/product/ProductInfo"
+import ImageGallery from "../components/product/ImageGallery"
 import React from "react"
-import BuyBox from "../components/BuyBox"
+import BuyBox from "../components/product/BuyBox"
 import getRecomendations from "../api-calls/getRecomendations"
 import styles from '../css/pages/product.module.css'
 import { useParams } from "react-router-dom"
-import ProductCarousel from "../components/ProductCarousel"
-import Reviews from "../components/Reviews"
-import Header from "../components/Header"
+import ProductCarousel from "../components/common/ProductCarousel"
+import Reviews from "../components/product/Reviews"
+import Header from "../components/common/Header"
 function Product() {
     const pid = useParams();
     return (

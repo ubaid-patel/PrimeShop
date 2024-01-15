@@ -3,7 +3,7 @@ const search = '/search.svg'
 const accountCircle = '/account_circle.jpg'
 const cart = '/lock.svg'
 import { useNavigate } from 'react-router-dom'
-import styles from '../css/components/checkout_header.module.css'
+import styles from '../../css/components/checkout/checkout_header.module.css'
 
 function CheckoutHeader() {
     const nav = useNavigate();

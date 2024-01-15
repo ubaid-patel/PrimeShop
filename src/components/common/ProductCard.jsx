@@ -1,4 +1,4 @@
-import styles from '../css/components/product_card.module.css'
+import styles from '../../css/common/product_card.module.css'
 import { Link } from 'react-router-dom'
 function ProductCard({ details }) {
     return (

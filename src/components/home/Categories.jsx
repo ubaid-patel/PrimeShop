@@ -1,4 +1,4 @@
-import styles from '../css/components/categories.module.css'
+import styles from '../../css/components/home/categories.module.css'
 function Categories(){
     //Categories array
     const categories = [

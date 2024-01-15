@@ -1,9 +1,9 @@
 import styles from '../css/pages/products.module.css'
-import ProductCard from '../components/ProductCard'
+import ProductCard from '../components/common/ProductCard'
 import React from 'react'
 import getRecomendations from '../api-calls/getRecomendations'
-import Filters from '../components/Filters';
-import Header from '../components/Header';
+import Filters from '../components/product_gallery/Filters';
+import Header from '../components/common/Header';
 function Products(){
     const products = getRecomendations("featured").concat(getRecomendations("featured")).concat(getRecomendations("featured")).concat(getRecomendations("featured")).concat(getRecomendations("features"));
     return(

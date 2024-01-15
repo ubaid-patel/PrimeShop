@@ -1,4 +1,4 @@
-import styles from '../css/components/profile_info.module.css'
+import styles from '../../css/components/account/profile_info.module.css'
 export default function Profileinfo() {
     console.log(styles)
     return (

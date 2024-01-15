@@ -1,4 +1,4 @@
-import styles from '../css/components/suggestion_box.module.css'
+import styles from '../../css/components/home/suggestion_box.module.css'
 function SuggestionBox({show}){
     const obj  = {
         icon:"/search.svg",

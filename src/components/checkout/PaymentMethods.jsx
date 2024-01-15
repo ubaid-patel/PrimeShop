@@ -1,4 +1,4 @@
-import styles from '../css/components/payment_methods.module.css'
+import styles from '../../css/components/checkout/payment_methods.module.css'
 function PaymentMethods() {
     return (
         <div className={styles.pay_methods}>

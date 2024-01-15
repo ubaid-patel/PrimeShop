@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from '../css/components/product_Info.module.css'
+import styles from '../../css/components/product/product_Info.module.css'
 function ProductInfo() {
     const details = {
         title: "Action Athleo ATG-496 Men's Mesh Breathable Lightweight Comfort Walking Gym Outdoor Trendy Running Shoe",

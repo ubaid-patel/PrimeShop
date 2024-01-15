@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import styles from '../css/components/confirm_order.module.css'
+import styles from '../../css/components/checkout/confirm_order.module.css'
 function ConfirmOrder(){
     const nav = useNavigate();
     return(

@@ -1,10 +1,10 @@
 import { Route, Routes, useNavigate, useParams } from 'react-router-dom'
 import styles from '../css/pages/account.module.css'
-import Profileinfo from '../components/ProfileInfo';
-import ManageAddress from '../components/ManageAddress';
-import Header from '../components/Header';
-import GiftCard from '../components/GiftCard';
-import AccountContent from '../components/AccountContent';
+import Profileinfo from '../components/account/ProfileInfo';
+import ManageAddress from '../components/account/ManageAddress';
+import Header from '../components/common/Header';
+import GiftCard from '../components/account/GiftCard';
+import AccountContent from '../components/account/AccountContent';
 
 export default function Account() {
     const nav = useNavigate();

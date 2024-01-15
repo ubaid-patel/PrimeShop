@@ -8,12 +8,12 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
-import Header from "./components/Header";
+
 import Checkout from "./pages/Checkout";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Cart from "./pages/Cart";
-import Products from "./pages/Products";
+import Products from "./pages/ProductGallery";
 import styles from './css/pages/app.module.css'
 import Account from "./pages/Account";
 

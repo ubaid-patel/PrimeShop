@@ -1,7 +1,7 @@
 import { useState } from "react"
 import AddressForm from "./AddressForm"
-import { addressObj, addressData } from "./config"
-import styles from '../css/components/manage_address.module.css'
+import { addressObj, addressData } from "../config"
+import styles from '../../css/components/account/manage_address.module.css'
 
 export default function ManageAddress() {
     const [addAddress, setAddAddress] = useState(false)

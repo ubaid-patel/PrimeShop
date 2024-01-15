@@ -1,8 +1,8 @@
-import Header from "../components/Header";
-import Carousel from "../components/Carousel";
-import Categories from "../components/Categories";
-import ProductCarousel from "../components/ProductCarousel";
-import Footer from "../components/Footer";
+import Header from "../components/common/Header";
+import Carousel from "../components/home/Carousel";
+import Categories from "../components/home/Categories";
+import ProductCarousel from "../components/common/ProductCarousel";
+import Footer from "../components/common/Footer";
 import React from "react";
 import getRecomendations from "../api-calls/getRecomendations";
 

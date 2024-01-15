@@ -3,8 +3,8 @@ const search = '/search.svg'
 const accountCircle = '/account_circle.jpg'
 const cart = '/shopping_cart.jpg'
 import { useNavigate } from 'react-router-dom'
-import styles from '../css/components/header.module.css'
-import SuggestionBox from './SuggestionBox'
+import styles from '../../css/common/header.module.css'
+import SuggestionBox from '../home/SuggestionBox'
 import { useState } from 'react'
 
 function Header (){

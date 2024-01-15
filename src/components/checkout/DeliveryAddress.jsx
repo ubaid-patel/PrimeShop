@@ -1,4 +1,4 @@
-import styles from '../css/components/deliveryaddress.module.css'
+import styles from '../../css/components/checkout/deliveryaddress.module.css'
 function DeliveryAddress() {
     const obj =
     {

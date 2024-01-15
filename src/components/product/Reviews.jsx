@@ -1,4 +1,4 @@
-import styles from '../css/components/reviews.module.css'
+import styles from '../../css/components/product/reviews.module.css'
 
 function getWeightedAverage(array) {
     let multi = array.reduce((prev, curr, index) => prev + (curr * (index + 1)));

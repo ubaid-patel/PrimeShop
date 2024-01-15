@@ -1,5 +1,5 @@
-import getFooter from '../api-calls/getFooter'
-import styles from '../css/components/footer.module.css'
+import getFooter from '../../api-calls/getFooter'
+import styles from '../../css/common/footer.module.css'
 import { Link } from 'react-router-dom'
 
 function Footer() {

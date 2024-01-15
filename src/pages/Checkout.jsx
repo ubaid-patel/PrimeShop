@@ -1,10 +1,10 @@
 import React from 'react'
-import CheckoutHeader from '../components/CheckoutHeader'
-import DeliveryAddress from '../components/DeliveryAddress'
-import Header from '../components/Header'
-import PaymentMethods from '../components/PaymentMethods'
+import CheckoutHeader from '../components/checkout/CheckoutHeader'
+import DeliveryAddress from '../components/checkout/DeliveryAddress'
+import Header from '../components/common/Header'
+import PaymentMethods from '../components/checkout/PaymentMethods'
 import styles from '../css/pages/checkout.module.css'
-import ConfirmOrder from '../components/OrderCorfirm'
+import ConfirmOrder from '../components/checkout/OrderCorfirm'
 function Checkout() {
     return (
         <React.Fragment>

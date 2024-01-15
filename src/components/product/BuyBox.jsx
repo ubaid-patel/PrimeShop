@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import styles from '../css/components/buybox.module.css'
+import styles from '../../css/components/product/buybox.module.css'
 function BuyBox() {
     const nav = useNavigate()
     let details = { price: 1999, stock: 900, seller: "", delivery: { charges: null, time: 5, validity: 6, location: "Ubaid Patel Gola k Shahabad 585228" } }
