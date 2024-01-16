@@ -3,7 +3,7 @@ import ProductInfo from "../components/product/ProductInfo"
 import ImageGallery from "../components/product/ImageGallery"
 import React from "react"
 import BuyBox from "../components/product/BuyBox"
-import getRecomendations from "../api-calls/getRecomendations"
+import { getRecomendations } from "../services/productService"
 import styles from '../css/pages/product.module.css'
 import { useParams } from "react-router-dom"
 import ProductCarousel from "../components/common/ProductCarousel"

@@ -1,4 +1,29 @@
-function getFooter() {
+export function getFilters(){
+    const obj = {
+        "name": "Brand",
+        "list": [{ title: "Sparx", value: "Sparx" }, { title: "Puma", value: "Puma" }, { title: "Nike", value: "Nike" },
+        { title: "Adidas", value: "Adidas" }, { title: "Woodland", value: "Woodland" }],
+    }
+    return([obj,obj,obj,obj,obj])
+}
+
+export function getSuggestions(){
+    const obj = {
+        icon: "/search.svg",
+        title: "This is the main component the best and solid"
+    }
+    return([obj,obj,obj,obj,obj,obj])
+}
+
+export function getCartItems(){
+    const cartObj = {
+        pid:"JGTIO4",
+        variant:[0,2]
+    }
+    return(cartObj,cartObj,cartObj,cartObj,cartObj,cartObj,cartObj)
+}
+
+export function getFooter() {
     const footer = [
         {
             title: "About", items: [
@@ -29,5 +54,3 @@ function getFooter() {
     ];
     return footer;
 }
-
-export default getFooter;

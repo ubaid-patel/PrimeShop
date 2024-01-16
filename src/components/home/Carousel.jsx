@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useRef, useState } from "react";
 import styles from '../../css/components/home/carousel.module.css'
-import getCarousel from "../../api-calls/getCarousel";
+import { getCarousel } from "../../services/homeService";
 import { Link } from "react-router-dom";
 const carouselBtn = 'next1.svg';
 

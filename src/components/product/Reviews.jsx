@@ -26,7 +26,7 @@ function Reviews() {
 
     }
     const summary = {
-        rating: [0, 0, 0, 0, 2],
+        rating: [100, 0, 0, 6, 2],
     }
     const details = [obj, obj, obj, obj, obj, obj, obj, obj]
     return (

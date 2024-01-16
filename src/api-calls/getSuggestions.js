@@ -1,5 +1,0 @@
-function getSuggestions(){
-    return(
-        {}
-    )
-}

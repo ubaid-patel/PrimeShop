@@ -4,7 +4,7 @@ import Categories from "../components/home/Categories";
 import ProductCarousel from "../components/common/ProductCarousel";
 import Footer from "../components/common/Footer";
 import React from "react";
-import getRecomendations from "../api-calls/getRecomendations";
+import { getRecomendations } from "../services/productService";
 
 function Home() {
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../css/pages/cart.module.css'
 import ProductCarousel from '../components/common/ProductCarousel';
-import getRecomendations from '../api-calls/getRecomendations';
+import { getRecomendations } from '../services/productService';
 import Header from '../components/common/Header';
 import { useNavigate } from 'react-router-dom';
 function Cart() {
