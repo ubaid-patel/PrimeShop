@@ -1,8 +1,7 @@
 .back{
     width: 50%;
     height: 400px;
-    background-color: green;
-    background-image: url("http://localhost:3000/back.jpg");
+    background-image: url('../../../public/back.jpg');
     background-size: cover;
     /* background-repeat: no-repeat; */
     padding-top: 25px;

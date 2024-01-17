@@ -11,10 +11,10 @@ export function getCategories() {
 
 export function getCarousel(){
     const carousel = [
-        { endpoint: "#", img: "carou1.jpg" },
-        { endpoint: "#", img: "carou1.jpg" },
-        { endpoint: "#", img: "carou1.jpg" },
-        { endpoint: "#", img: "carou1.jpg" }
+        { endpoint: "#", img: "carou6.jpg" },
+        { endpoint: "#", img: "carou2.jpg" },
+        { endpoint: "#", img: "carou3.jpg" },
+        { endpoint: "#", img: "carou5.jpg" }
     ]
     return(carousel)
 }
