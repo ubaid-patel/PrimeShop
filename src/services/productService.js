@@ -1,32 +1,3 @@
-export function getAllProducts(category) {
-    const productObj = {
-        pid: "AH89P",
-        title: "SuperRep Go Training & Gym Shoes For Men",
-        disciption: "",
-        price: 990,
-        mrp: 1990,
-        variants:[
-            {type:"Color",options:[
-                {name:"Green",imgSet:this.images[0]},
-                {name:"Blue",imgSet:this.images[1]},
-                {name:"Red",imgSet:this.images[2]}
-            ]},
-            {type:"Sizes",options:[
-                {name:"7 IN",imgSet:this.images[0]},
-                {name:"8 IN",imgSet:this.images[0]},
-                {name:"8 IN",imgSet:this.images[0]}
-            ]},
-        ],
-        delivery: 6, 
-        imageGroups:[
-            ["carou1.jpg","carou2.jpg","carou3.jpg"],
-            ["carou3.jpg","carou2.jpg","carou1.jpg"],
-            ["carou2.jpg","carou1.jpg","carou3.jpg"]
-        ]
-    }
-    return([productObj,productObj,productObj,productObj])
-}
-
 export function getProduct(pid){
     const productObj = {
         pid: "AH89P",
@@ -36,18 +7,18 @@ export function getProduct(pid){
         mrp: 1990,
         variants:[
             {type:"Color",options:[
-                {name:"Green",imgSet:this.images[0]},
-                {name:"Blue",imgSet:this.images[1]},
-                {name:"Red",imgSet:this.images[2]}
+                {name:"Voite",imgSet:0},
+                {name:"Blue",imgSet:1},
+                {name:"Red",imgSet:2}
             ]},
             {type:"Sizes",options:[
-                {name:"7 IN",imgSet:this.images[0]},
-                {name:"8 IN",imgSet:this.images[0]},
-                {name:"8 IN",imgSet:this.images[0]}
+                {name:"7 IN",imgSet:0},
+                {name:"8 IN",imgSet:0},
+                {name:"8 IN",imgSet:0}
             ]},
         ],
         delivery: 6, 
-        imageGroups:[
+        images:[
             ["carou1.jpg","carou2.jpg","carou3.jpg"],
             ["carou3.jpg","carou2.jpg","carou1.jpg"],
             ["carou2.jpg","carou1.jpg","carou3.jpg"]
@@ -55,6 +26,12 @@ export function getProduct(pid){
     }
     return(productObj)
 }
+
+export function getAllProducts(category) {
+    return([getProduct(),getProduct(),getProduct(),getProduct(),getProduct(),getProduct(),getProduct()])
+}
+
+
 
 export function getReviews(pid){
     const reviewObj = {
