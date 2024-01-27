@@ -26,7 +26,7 @@ function Products(){
                     </div>
                     <div className={styles.all_products}>
                     {products.map((product)=>{
-                        return <div className={styles.product}><ProductCard details={product}/></div>
+                        return <div className={styles.product}><ProductCard product={product} variant={[0,0]}/></div>
                     })}
                     </div>
                 </div>

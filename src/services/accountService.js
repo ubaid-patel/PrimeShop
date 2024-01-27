@@ -21,6 +21,7 @@ export function getAccountSettings() {
 
 export function getSavedAddresses() {
     const addressObj = {
+        id: "ADR01ID",
         type: "home",
         name: "Ubaid Patel",
         pincode: 585389,
@@ -32,4 +33,30 @@ export function getSavedAddresses() {
         mobile: ["9148749147", "9035035517"]
     }
     return ([addressObj, addressObj, addressObj, addressObj])
+}
+
+export function getAddresses() {
+    const addressObj = {
+        id: "ADR01ID",
+        type: "home",
+        name: "Ubaid Patel",
+        pincode: 585389,
+        address: "New area Gola K",
+        locality: "Gulbarga",
+        city: "Shahabad",
+        state: "Karnataka",
+        landmark: "Beside Panchayat Office",
+        mobile: ["9148749147", "9035035517"]
+    }
+    return (addressObj)
+}
+
+function getOrders(){
+    const order = {
+        id:"ORDER_ID",
+        product:"PRODUCT_ID",
+        variant:"PRODUCT_VARIANT",
+        address:"ADDRESS_ID"
+    }
+    const orders = []
 }

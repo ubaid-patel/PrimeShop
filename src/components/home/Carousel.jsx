@@ -1,7 +1,6 @@
 import React, { Component, useEffect, useRef, useState } from "react";
 import styles from '../../css/components/home/carousel.module.css'
 import { getCarousel } from "../../services/homeService";
-import { Link } from "react-router-dom";
 const carouselBtn = 'next1.svg';
 
 function Carousel() {
@@ -57,7 +56,7 @@ function Carousel() {
                         indicatorsRef.current.children[nextindi].classList.add(styles.active);
                         indicator.current = nextindi;
                         carouselItemsRef.current.style = `transform: translateX(${offset.current}px)`
-                        // nextImage();
+                        nextImage();
                     }, 10)
                 }
             )
@@ -75,7 +74,7 @@ function Carousel() {
             indicator.current = nextindi;
             carouselItemsRef.current.style = `transform: translateX(${offset.current}px)`
             index.current += to;
-            // nextImage();
+            nextImage();
         }
 
     }
@@ -90,7 +89,7 @@ function Carousel() {
     }
 
     useEffect(() => {
-        // nextImage();
+        nextImage();
         return () => clearTimeout(autoScroll.current.id);
     }, [])
 

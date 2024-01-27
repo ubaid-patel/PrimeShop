@@ -1,6 +1,5 @@
 import styles from '../../css/components/account/profile_info.module.css'
 export default function Profileinfo() {
-    console.log(styles)
     return (
         <div className={styles.main}>
             <div className={styles.personal_info}>

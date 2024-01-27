@@ -14,7 +14,7 @@ function ProductCarousel({ items,name }) {
                     {items.map((item) => {
                         return (
                             <div className={styles.item}>
-                                <ProductCard details={item} />
+                                <ProductCard product={item} variant={[0,0]} />
                             </div>
                         )
                     })}

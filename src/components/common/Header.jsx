@@ -12,7 +12,6 @@ function Header (){
     const [search,setSearch] = useState(false)
     function showSugestions(event){
         event.preventDefault();
-        // alert(event.target.value)
         if(event.target.value != ''){
             setSearch(true)
         }else{

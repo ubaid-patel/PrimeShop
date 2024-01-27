@@ -1,13 +1,8 @@
 import React from 'react'
 import styles from '../../css/components/product_gallery/filter.module.css'
+import { getFilters } from '../../services/commonService'
 function Filters() {
-    const obj = {
-        "name": "Brand",
-        "list": [{ title: "Sparx", value: "Sparx" }, { title: "Puma", value: "Puma" }, { title: "Nike", value: "Nike" },
-        { title: "Adidas", value: "Adidas" }, { title: "Woodland", value: "Woodland" }],
-    }
-    const data = [obj, obj, obj, obj, obj, obj]
-    const appliedFilters = ["₹500 - ₹3000+"]
+    const data = getFilters();
     return (
         <div className={styles.filters}>
             <div className={styles.heading}>

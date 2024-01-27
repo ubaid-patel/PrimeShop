@@ -3,25 +3,23 @@ export function getProduct(pid){
         pid: "AH89P",
         title: "SuperRep Go Training & Gym Shoes For Men",
         disciption: "",
-        price: 990,
-        mrp: 1990,
         variants:[
             {type:"Color",options:[
-                {name:"Voite",imgSet:0},
-                {name:"Blue",imgSet:1},
-                {name:"Red",imgSet:2}
+                {name:"Voite",imgSet:0,stock:90,price:888,mrp:999},
+                {name:"Blue",imgSet:1,stock:90,price:888,mrp:999},
+                {name:"Red",imgSet:2,stock:90,price:888,mrp:999}
             ]},
             {type:"Sizes",options:[
-                {name:"7 IN",imgSet:0},
-                {name:"8 IN",imgSet:0},
-                {name:"8 IN",imgSet:0}
+                {name:"7 IN",imgSet:0,stock:90,price:888,mrp:999},
+                {name:"8 IN",imgSet:0,stock:90,price:888,mrp:999},
+                {name:"8 IN",imgSet:0,stock:90,price:888,mrp:999}
             ]},
         ],
-        delivery: 6, 
+        delivery: {charges:null,time:5,validity:19}, 
         images:[
-            ["carou1.jpg","carou2.jpg","carou3.jpg"],
-            ["carou3.jpg","carou2.jpg","carou1.jpg"],
-            ["carou2.jpg","carou1.jpg","carou3.jpg"]
+            ["/carou1.jpg","/carou2.jpg","/carou3.jpg"],
+            ["/carou3.jpg","/carou2.jpg","/carou1.jpg"],
+            ["/carou2.jpg","/carou1.jpg","/carou3.jpg"]
         ]
     }
     return(productObj)
@@ -40,12 +38,42 @@ export function getReviews(pid){
         title: "Very Nice Product",
         date: "20 December 2023",
         description: "Best Quality ant Very Affordable Rates",
-        rating:[12,0,13,78,89]
+        rating:3
     }
-    return(reviewObj)
+    return([reviewObj,reviewObj,reviewObj,reviewObj])
+}
+export function getRatings(pid){
+    let ratings = [12,245,34,45,89];
+    //Calculating weighted average
+    let multi = ratings.reduce((prev, curr, index) => prev + (curr * (index + 1)));
+    let sum = ratings.reduce((prev, curr) => prev + curr)
+    let wAverage = multi / sum
+
+    //Calculating rating percent of each star
+    const starPrec = [];
+    ratings.forEach((value) => {
+        starPrec.push((value / sum) * 100)
+    })
+    return({star:wAverage,reviews:sum,starPrecent:starPrec})
 }
 
 export function getRecomendations(){
     let result = getAllProducts();
     return(result)
+}
+
+export function normalizeProduct(input,variant){
+    const output  = {
+        pid:input.pid,
+        title:input.title,
+        description:input.disciption,
+        price:input.variants[variant[0]].options[variant[1]].price,
+        mrp:input.variants[variant[0]].options[variant[1]].mrp,
+        varName:input.variants[variant[0]].options[variant[1]].name,
+        images:input.images[input.variants[variant[0]].options[variant[1]].imgSet],
+        stock:input.variants[variant[0]].options[variant[1]].stock,
+        delivery:input.delivery,
+        variants:input.variants
+    };
+    return(output)
 }
