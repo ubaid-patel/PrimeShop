@@ -20,7 +20,7 @@ export function getCartItems(){
         pid:"JGTIO4",
         variant:[0,2]
     }
-    return(cartObj,cartObj,cartObj,cartObj,cartObj,cartObj,cartObj)
+    return([cartObj,cartObj,cartObj,cartObj,cartObj,cartObj,cartObj])
 }
 
 export function getFooter() {
@@ -53,4 +53,11 @@ export function getFooter() {
         }
     ];
     return footer;
+}
+export function performSearch(keyword){
+    const obj  = {
+        icon:"/search.svg",
+        title:"This is the main component the best and solid"
+    }
+    return([obj,obj,obj,obj,obj,obj,obj])
 }

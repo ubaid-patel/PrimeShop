@@ -1,42 +1,24 @@
 import { useState } from "react"
 import AddressForm from "./AddressForm"
-import { addressObj, addressData } from "../config"
+import { getSavedAddresses } from "../../services/accountService"
 import styles from '../../css/components/account/manage_address.module.css'
 
 export default function ManageAddress() {
     const [addAddress, setAddAddress] = useState(false)
-    const [addressForm, setAddressForm] = useState(addressObj)
-    function showAddressForm() {
-        const callback = (status,newData) =>{
-            if (status === 'success'){
-                setAddressForm([...addressData,newData])
-            }else{
-                setAddAddress(false);
-                setAddressForm({...addressObj,show:false})
-            }
-
-        }
-        setAddAddress(true);
-        setAddressForm({...addressObj,show:true,
-            callback:()=>{setAddAddress(false),setAddressForm({...addressObj,show:false})}
-        })
-    }
-    function editAddress(address){
-        setAddressForm({...addressObj,show:true,values:address,callback:()=>{setAddressForm({addressObj,show:false})}})
-    }
+    
     return (
         <div className={styles.main}>
             <h3>Manage Addresses</h3>
             {(!addAddress) &&
-                <button className={styles.add_address} onClick={showAddressForm} >
+                <button className={styles.add_address} >
                     <img src="/plus.svg" alt="" />
                     <span>ADD A NEW ADDRESS</span>
                 </button>
             }
-            <AddressForm data={addressForm}/>
+            <AddressForm/>
             <div className={styles.addresses}>
                 {
-                    addressData.map((address) => {
+                    getSavedAddresses().map((address) => {
                         return<div className={styles.address}>
                             <div className={styles.head}>
                                 <button>{address.type}</button>

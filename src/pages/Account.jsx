@@ -5,27 +5,12 @@ import ManageAddress from '../components/account/ManageAddress';
 import Header from '../components/common/Header';
 import GiftCard from '../components/account/GiftCard';
 import AccountContent from '../components/account/AccountContent';
+import { getAccountSettings } from '../services/accountService';
 
 export default function Account() {
     const nav = useNavigate();
     const path = useParams();
-    const data = [
-        {
-            title: "Account settings", links: [{ title: "Profile information", location: "/account/profile" },
-            { title: "Manage Addresses", location: "/account/addresses" }], icon: "/account.svg"
-        },
-
-        {
-            title: "Payments", links: [{ title: "Gift Cards", location: "/account/gift_cards" },
-            { title: "Saved Cards", location: "/account/cards" }, { title: "Saved UPI", location: "/account/saved_vpa" }], icon: "/wallet.svg"
-        },
-        {
-            title: "My Stuff", links: [{ title: "My coupons", location: "/account/my_coupons" },
-            { title: "My Review & Ratings", location: "/account/my_reviews" }, { title: "My Wishlist", location: "/account/wishlist" },
-            { title: "All Notifications", location: "/account/notifications" }], icon: "/mystuff.svg"
-        },
-
-    ]
+    const data = getAccountSettings();
     return (
         <>
             <Header />

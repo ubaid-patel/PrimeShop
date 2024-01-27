@@ -1,43 +1,18 @@
 import styles from '../../css/components/product/reviews.module.css'
+import { getRatings, getReviews } from '../../services/productService';
 
-function getWeightedAverage(array) {
-    let multi = array.reduce((prev, curr, index) => prev + (curr * (index + 1)));
-    let average = array.reduce((prev, curr) => prev + curr)
-    let wAverage = multi / average
-    return wAverage;
-}
-function getStarPerc(summary) {
-    const perc = [];
-    const total = summary.reduce((prev, curr) => prev + curr);
-
-    summary.forEach((value) => {
-        perc.push((value / total) * 100)
-    })
-    return (perc)
-}
 function Reviews() {
-    const obj = {
-        name: "Ubaid Patel",
-        photo: null,
-        title: "Very Nice Product",
-        date: "20 December 2023",
-        description: "Best Quality ant Very Affordable Rates",
-        rating: 5
-
-    }
-    const summary = {
-        rating: [100, 0, 0, 6, 2],
-    }
-    const details = [obj, obj, obj, obj, obj, obj, obj, obj]
+    const rating = getRatings();
+    const reviews = getReviews();
     return (
         <div className={styles.reviews}>
             <div className={styles.summary}>
                 <div className={styles.wtAverage}>
-                    {Array.from({ length: details.reduce((a, b) => a + b) }, () => <img src={"star.svg"} />)}
-                    <span className={styles.average_rating}>{getWeightedAverage(summary.rating)} Out of 5</span>
-                    <span>{summary.rating.reduce((prev, curr) => prev + curr)} Global Ratings</span>
+                    {Array.from({length:Math.floor(rating.star)}, () => <img src={"/star.svg"} />)}
+                    <span className={styles.average_rating}>{rating.star} Out of 5</span>
+                    <span>{rating.reviews} Global Ratings</span>
                     <div className={styles.rating_perc}>
-                        {getStarPerc(summary.rating).map(
+                        {rating.starPrecent.map(
                             (value, index) => <div className={styles.star_perc}>
                                 <span className={styles.star_numer}>{index + 1} Star</span>
                                 <div className={styles.percent_box}>
@@ -56,7 +31,7 @@ function Reviews() {
             <div className={styles.top_reviews}>
                 <h1>Customer Reviews</h1>
                 {
-                    details.map((review) =>
+                    reviews.map((review) =>
                         <div className={styles.review}>
                             <div className={styles.profile}>
                                 <img src={review.photo ? review.photo : "/account_circle.jpg"} />

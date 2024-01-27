@@ -1,14 +1,16 @@
 import { useNavigate } from 'react-router-dom'
 import styles from '../../css/components/product/buybox.module.css'
+import { getProduct } from '../../services/productService'
+import { getSavedAddresses } from '../../services/accountService'
 function BuyBox() {
     const nav = useNavigate()
-    let details = { price: 1999, stock: 900, seller: "", delivery: { charges: null, time: 5, validity: 6, location: "Ubaid Patel Gola k Shahabad 585228" } }
+    let product  = getProduct();
     return (
         <div className={styles.buy_box}>
-            <h2 className={styles.price}>₹{details.price}</h2>
+            <h2 className={styles.price}>₹{product.variants[0].options[0].price}</h2>
             <div className={styles.delivery}>
                 <span className={styles.delivery_charges}>
-                    {(details.delivery.charges == null) ? "FREE delivery" : details.delivery.charges + " delivery charges"}
+                    {(product.delivery.charges == null) ? "FREE delivery" : product.delivery.charges + " delivery charges"}
                 </span>
                 <span className={styles.delivery_day}>Monday ,27 December</span>
                 <span className={styles.delivery_validity}>Order within 17 hrs 23mins</span>
@@ -18,7 +20,7 @@ function BuyBox() {
                 <span>Deliver to Ubaid patel Gola k</span>
             </div>
             <span className={styles.stock}>
-                {(details.stock > 0) ? "IN STOCK" : "OUT OF Stock"}
+                {(product.variants[0].options[0].stock > 0) ? "IN STOCK" : "OUT OF Stock"}
             </span>
             <div className={styles.quantity}>
                 <select>
