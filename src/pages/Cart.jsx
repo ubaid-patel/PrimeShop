@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from '../css/pages/cart.module.css'
-import ProductCarousel from '../components/common/ProductCarousel';
-import { getAllProducts, getProduct, getRecomendations, normalizeProduct } from '../services/productService';
+import { getProduct, normalizeProduct } from '../services/productService';
 import Header from '../components/common/Header';
 import { useNavigate } from 'react-router-dom';
 import { getCartItems } from '../services/commonService';
@@ -35,7 +34,7 @@ function Cart() {
                     <table>
                         <tr><td>Price (4 items)</td><td>₹15,195</td></tr>
                         <tr><td>Discount</td><td className={styles.green}>- ₹15,195</td></tr>
-                        <tr><td>Buy more & save more</td><td  className={styles.green}>- ₹15,195</td></tr>
+                        <tr><td>Buy more & save more</td><td className={styles.green}>- ₹15,195</td></tr>
                         <tr><td>Secured Packaging Fee</td><td>₹15,195</td></tr>
                         <tr><td>Delivery Charges</td><td>₹15,195</td></tr>
                     </table>

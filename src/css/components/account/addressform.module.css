@@ -1,0 +1,99 @@
+.address_form{
+    background-color: #f5faff;
+    padding: 20px;
+}
+.head{
+    font-weight: 500;
+    font-size: medium;
+    color: #2874f0;
+}
+.use_location{
+    background-color: #2874f0;
+    color: white;
+    font-size: medium;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+.row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+.row input,.row select{
+    flex: 1;
+}
+.address_form input[type="text"],.address_form select{
+    font-size: small;
+    outline: none;
+    padding: 10px;
+    color: grey;
+    max-width: 100%;
+    border: 1px solid #cfd0d1;
+}
+.address_form select{
+    width: 200px;
+}
+.address_form textarea{
+    width:100%;
+    resize: none;
+    color: grey;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cfd0d1;
+    outline: none;
+}
+.address_form textarea::placeholder{
+    color: grey;
+}
+.address_form option{
+    color: black;
+}
+.address_form input[type="text"]::placeholder{
+    font-size: small;
+    color: grey;
+}
+.address_form input[type="text"]:nth-child(odd){
+    margin-right: 20px;
+}
+.address_form div:not(:last-child){
+    margin-bottom: 10px;
+}
+.content{
+    width: 60%;
+}
+.address_type h4{
+    font-size: smaller;
+    font-weight: 200;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+.address_type {
+    
+}
+.address_type input{
+    margin: 0px;
+    padding: none;
+}
+.address_type label{
+    margin-left: 3px;
+    margin-right: 30px;
+}
+.save,.cancel{
+    margin-top: 30px;
+    font-size: medium;
+    font-weight: 500;
+    color: white;
+    background-color: #2874f0;
+    padding: 15px;
+    width: 230px;
+    border: none;
+    outline: none;
+}
+.cancel{
+    color: #2874f0;
+    background-color: transparent;
+    width: 150px;
+}

@@ -4,6 +4,9 @@
 .main{
     width: 100%;
     background-color: white;
+    padding-left: 25px;
+    padding-top: 30px;
+    box-sizing: border-box;
 }
 .main input{
     background-color: rgba(213, 212, 212, 0.449);
@@ -11,6 +14,15 @@
     padding: 4px;
     border: 1px solid black;
     margin-right: 15px;
+}
+.main input[type="text"]{
+    padding: 13px 8px;
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid rgb(192, 192, 192);
+    background-color: rgba(232, 232, 232, 0.63);
+    font-size: medium;
+    width: 300px;
 }
 ::placeholder{
     color: var(--form-font-clr);
@@ -27,15 +39,21 @@
 .mobile{
 
 }
+.gender{
+    font-weight: 500;
+    font-size: 15px;
+}
 .head{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
+    width: max-content;
 }
 .head h3{
-    font-weight: 400;
+    font-weight: 500;
     padding-right: 20px;
+    margin: 0px;
 }
 .head button{
     border: none;
@@ -43,4 +61,7 @@
     background-color: rgba(240, 248, 255, 0);
     color: rgb(3, 104, 255);
     display: block;
+}
+.personal_info,.email,.mobile{
+    margin-bottom: 60px;
 }

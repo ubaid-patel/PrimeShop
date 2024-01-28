@@ -1,15 +1,19 @@
 :root{
-    --option-bdr-clr:rgb(104, 102, 102);
+    --option-bdr-clr:rgb(226, 226, 226);
+    --option-color:grey;
+    --option-weight:500;
+    --option-size:medium;
 }
 .main{
    display: flex; 
-   width: 80%;
+   width: 90%;
    margin: auto;
 }
 .sidebar{
     margin-top: 20px;
-    width: 300px;
+    width: 450px;
     box-sizing: border-box;
+    margin-bottom: 30px;
 }
 .greetings{
     background-color: white;
@@ -23,7 +27,8 @@
     display: block;
 }
 .greetings div span{
-    font-weight: 100;
+    font-weight: 400;
+    font-size: small;
     padding-left: 10px;
 }
 .greetings div h3{
@@ -38,15 +43,34 @@
     width: 100%;
 }
 .my_orders{
-    padding: 2px 10px;
+    padding: 2px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1px solid var(--option-bdr-clr);
+    border-bottom: 1px solid var(--option-bdr-clr);
 }
-.my_orders img{
-    display: block;
+.my_orders div:first-child{
+    flex: 9;
+    display: flex;
+    align-items: center;
+}
+.my_orders div:first-child img{
+    margin-right: 15px;
+}
+.my_orders div h3{
+    display: inline-block;
+    font-weight: var(--option-weight);
+    font-size: var(--option-size);
+    color:var(--option-color) ;
+}
+.my_orders div{
+    flex: 1;
+}
+.my_orders div:last-child img{
     margin: auto;
+    transform: rotate(180deg);
+    height: 15px;
+    width: 15px;
 }
 .my_orders h3{
     font-weight: 400;
@@ -54,49 +78,48 @@
 .option{
 
 }
-.option_head{
+.option_head,.logout{
     display: flex;
-    padding: 2px 5px;
+    padding: 2px 15px;
     align-items: center;
     justify-content: center;
+    width: max-content;
+    margin-left: 8px;
 }
-.option_head img{
-    display: block;
-    margin: auto;
+.option_head img,.logout img{
+   margin-right: 20px;
 }
-.option_head h3{
-    font-weight: 400;
-}
-.option_head img{
-    display: block;
-    margin: auto;
+.option_head h3,.logout h3{
+    font-weight: var(--option-weight);
+    font-size: var(--option-size);
+    color: var(--option-color);
+
 }
 .option_body{
     border-bottom: 1px solid var(--option-bdr-clr);
 }
 .option_body h3{
+    font-size: medium;
     font-weight: 400;
-    font-weight: medium;
-    padding-left: 30%;
+    padding:15px 30px 15px 60px;
+    margin: 0px;
 }
+
 .option_body h3:hover{
     background-color: rgba(16, 129, 249, 0.19);
     color: rgb(52, 113, 245);
 }
-.logout{
-    display: flex;
-    width: 100%;
-}
-.logout img{
-    display: block;
-    margin: auto;
-}
-.logout h3{
-    margin: auto;
-}
+
 .displayer{
     width: 100%;
     background-color: white;
     margin-left: 20px;
     margin-top: 20px;
+}
+.logout{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.logout h3:hover{
+    color: rgb(0, 115, 255);
 }
