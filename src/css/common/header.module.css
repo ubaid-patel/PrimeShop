@@ -1,24 +1,29 @@
 :root {
-    --commongap: 95px;
+    --commongap: 105px;
   }
   
   .header {
     max-width: 100%;
     box-sizing: border-box;
-    height: 80px;
+    height: 60px;
     padding: 0 40px; /* Combine padding values into shorthand */
     display: flex; /* Use flexbox to align items horizontally */
     align-items: center; /* Center items vertically */
     background-color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 10000;
+    box-shadow: -3px 2px 9px rgb(221, 221, 221);
   }
   
   .searchBar {
     position: relative;
     border: 1px solid black;
-    height: 40px;
+    height: 35px;
     width: 45%;
     margin-left: var(--commongap);
-    border-radius: 8px;
+    border-radius: 2px;
     display: flex; /* Use flexbox to align items horizontally */
     align-items: center;
     padding: 2px;
@@ -43,13 +48,13 @@
   }
   
   .logo {
-    height: 68px;
+    height: 58px;
     cursor: pointer;
   }
   
   .accountCircle,
   .cart {
-    width: 40px;
+    width: 30px;
     display: inline-block;
     margin-left: var(--commongap);
   }

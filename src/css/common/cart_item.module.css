@@ -1,0 +1,132 @@
+
+.product{
+    width: 100%;
+    display: flex;
+    padding: 10px 6px;
+    box-sizing: border-box;
+}
+.product:not(:first-child){
+    border-top: 1px solid black;
+}
+
+.size_color{
+    font-size: small;
+    color: grey;
+}
+.qty{
+    border-radius: 5px;
+}
+.delete,.save{
+    font-size: medium;
+    font-weight: 500;
+}
+.save{
+    margin-right:  10px;
+    margin-left: 10px;
+}
+.discount{ 
+    color: green;
+    width: max-content;
+    font-weight: 500;
+}
+.price{
+    font-size: large;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.mrp{
+    font-weight: 400;
+    color: grey;
+    text-decoration: line-through;
+    font-size: medium;
+    margin-right: 10px;
+}
+
+.thumbnail{
+    width: 170px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.thumbnail img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+.details{
+    margin-left: 30px;
+}
+.details .title{
+    font-weight: 400;
+    font-size: large;
+}
+.address{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 6px;
+   
+}
+.address h2{
+    font-weight: 300;
+    font-size: medium;
+    float: left;
+    margin-left: 30px;
+    flex: 1;
+}
+.address div{
+    
+    flex: 1;
+}
+.address button{
+    float: right;
+    margin-right: 15px;
+    background-color: white;
+    padding: 8px;
+    color: rgb(0, 132, 255);
+    font-weight: 400;
+    font-size: medium;
+    outline: none;
+    border: 1px solid rgb(118, 117, 117);
+    border-radius: 2px;
+}
+
+.delivery{
+    margin-left: 20px;
+    font-weight: 400;
+    font-size: medium;
+}
+.prod_head{
+    display: flex;
+    align-items: center;
+}
+.controls{
+    display: flex;
+}
+.quantity button{
+    font-size: x-large;
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border: 1px solid rgb(154, 153, 153);
+    outline: none;
+    background-color: white;
+    text-align: center;
+}
+.quantity input{
+    width: 20px;
+    padding: 3px 10px;
+    text-align: center;
+    margin: 0px 10px;
+}
+.quantity{
+    display: flex;
+    align-items: center;
+}
