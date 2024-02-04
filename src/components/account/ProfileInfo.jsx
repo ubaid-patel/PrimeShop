@@ -9,7 +9,7 @@ export default function Profileinfo() {
                 </div>
                 <input type="text" placeholder="First name" />
                 <input type="text" placeholder="Last name" />
-                <h4>Gender</h4>
+                <h3 className={styles.gender}>Gender</h3>
                 <input type="radio" name="gender"/><span>Male</span>
                 <input type="radio" name="gender"/><span>Female</span>
             </div>

@@ -1,16 +1,16 @@
 export function getAccountSettings() {
     const accountSettings = [
         {
-            title: "Account settings", links: [{ title: "Profile information", location: "/account/profile" },
+            title: "ACCOUNT SETTINGS", links: [{ title: "Profile information", location: "/account/profile" },
             { title: "Manage Addresses", location: "/account/addresses" }], icon: "/account.svg"
         },
 
         {
-            title: "Payments", links: [{ title: "Gift Cards", location: "/account/gift_cards" },
+            title: "PAYMENTS", links: [{ title: "Gift Cards", location: "/account/gift_cards" },
             { title: "Saved Cards", location: "/account/cards" }, { title: "Saved UPI", location: "/account/saved_vpa" }], icon: "/wallet.svg"
         },
         {
-            title: "My Stuff", links: [{ title: "My coupons", location: "/account/my_coupons" },
+            title: "MY STUFF", links: [{ title: "My coupons", location: "/account/my_coupons" },
             { title: "My Review & Ratings", location: "/account/my_reviews" }, { title: "My Wishlist", location: "/account/wishlist" },
             { title: "All Notifications", location: "/account/notifications" }], icon: "/mystuff.svg"
         },
@@ -22,7 +22,7 @@ export function getAccountSettings() {
 export function getSavedAddresses() {
     const addressObj = {
         id: "ADR01ID",
-        type: "home",
+        type: "HOME",
         name: "Ubaid Patel",
         pincode: 585389,
         address: "New area Gola K",
@@ -38,7 +38,7 @@ export function getSavedAddresses() {
 export function getAddresses() {
     const addressObj = {
         id: "ADR01ID",
-        type: "home",
+        type: "HOME",
         name: "Ubaid Patel",
         pincode: 585389,
         address: "New area Gola K",

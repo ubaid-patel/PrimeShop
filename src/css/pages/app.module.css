@@ -1,9 +1,12 @@
-.checkout,.login,.cart{
+.checkout,.login{
     background-color: white;
 }
-.products{
+.products,.cart{
     background-color: #f8f8f8;
 }
 .account{
     background-color: #f8f8f8;
+}
+.cart{
+   min-height: 100vh;
 }

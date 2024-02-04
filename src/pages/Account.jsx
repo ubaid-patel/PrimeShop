@@ -25,9 +25,13 @@ export default function Account() {
                     </div>
                     <div className={styles.options}>
                         <div className={styles.my_orders}>
-                            <img src="/orders.svg" />
-                            <h3>MY ORDERS</h3>
-                            <img src="/next.svg" />
+                            <div>
+                                <img src="/orders.svg" />
+                                <h3>MY ORDERS</h3>
+                            </div>
+                            <div>
+                                <img src="/next.svg" />
+                            </div>
                         </div>
                         {data.map((option) => <div className={styles.option}>
                             <div className={styles.option_head}>
@@ -39,14 +43,15 @@ export default function Account() {
                             </div>
                         </div>
                         )}
-                    </div>
-                    <div className={styles.logout}>
+                        <div className={styles.logout}>
                         <img src="/button.svg" alt="" />
                         <h3>LOGOUT</h3>
                     </div>
+                    </div>
+                    
                 </aside>
                 <div className={styles.displayer}>
-                    <AccountContent/>
+                    <AccountContent />
                 </div>
             </div>
         </>
