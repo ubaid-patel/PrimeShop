@@ -1,35 +1,19 @@
 import React from 'react'
 import styles from '../../css/components/product_gallery/filter.module.css'
 import { getFilters } from '../../services/commonService'
+import PriceRange from './PriceRange';
 function Filters() {
     const data = getFilters();
     return (
         <div className={styles.filters}>
             <div className={styles.heading}>
-                <h1>Filters</h1>
+                <h2>Filters</h2>
                 <button>CLEAR ALL</button>
             </div>
             <div className={styles.applied_filters}>
 
             </div>
-            <div className={styles.price_range}>
-                <h3>PRICE</h3> 
-                <button>CLEAR</button>
-                <input type="range" min={0} max={3500} step={500} />
-                <select name="min">
-                    <option value={500}>{'Min'}</option>
-                    {Array.from({ length: 6 }, (value) => {
-                        <option value={value * 500}>{value * 500}</option>
-                    })}
-                </select>
-                <span>to</span>
-                <select name="max">
-                    {Array.from({ length: 5 }, (value) => {
-                        <option value={value * 500}>{value * 500}</option>
-                    })}
-                    <option value={3000}>3000+</option>
-                </select>
-            </div>
+            <PriceRange/>
             {
                 data.map((item) => {
                     return (

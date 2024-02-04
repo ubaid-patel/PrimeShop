@@ -1,6 +1,6 @@
 export function getFilters(){
     const obj = {
-        "name": "Brand",
+        "name": "BRAND",
         "list": [{ title: "Sparx", value: "Sparx" }, { title: "Puma", value: "Puma" }, { title: "Nike", value: "Nike" },
         { title: "Adidas", value: "Adidas" }, { title: "Woodland", value: "Woodland" }],
     }
