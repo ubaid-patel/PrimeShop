@@ -2,7 +2,7 @@ export function getProduct(pid){
     const productObj = {
         pid: "AH89P",
         title: "SuperRep Go Training & Gym Shoes For Men",
-        disciption: "",
+        disciption: "In a world where speed is king, the Samsung Galaxy S21 FE reigns supreme, offering a seamless blend of power, storage, and style that's sure to delight even the most demanding smartphone aficionados. With its lightning-fast processor, spacious storage, stunning camera capabilities, and long-lasting battery, it's a device that elevates every aspect of your mobile experience. Say hello to a world where fast doesn't just get faster; it gets phenomenal.",
         variants:[
             {type:"Color",options:[
                 {name:"Voite",imgSet:0,stock:90,price:888,mrp:999},
@@ -10,9 +10,11 @@ export function getProduct(pid){
                 {name:"Red",imgSet:2,stock:90,price:888,mrp:999}
             ]},
             {type:"Sizes",options:[
-                {name:"7 IN",imgSet:0,stock:90,price:888,mrp:999},
-                {name:"8 IN",imgSet:0,stock:90,price:888,mrp:999},
-                {name:"8 IN",imgSet:0,stock:90,price:888,mrp:999}
+                {name:"7 IND",imgSet:0,stock:90,price:888,mrp:999},
+                {name:"8 IND",imgSet:0,stock:90,price:888,mrp:999},
+                {name:"8 IND",imgSet:0,stock:90,price:888,mrp:999},
+                {name:"8 IND",imgSet:0,stock:90,price:888,mrp:999},
+                
             ]},
         ],
         delivery: {charges:null,time:5,validity:19}, 

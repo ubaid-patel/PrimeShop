@@ -9,16 +9,30 @@
    background-color: white;
 }
 .title{
-   
+    font-weight: 400;
 }
 .ratings{
     margin-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
 }
-.discount{
-    color:red;
+.ratings div{
+    display: flex;
+    align-items: center;
+    background-color: rgb(2, 95, 2);
+    padding: 3px 6px;
+    border-radius: 3px;
+    margin-right: 20px;
 }
-.mrp_span{
-    text-decoration:line-through;
+.ratings div span{
+    color: white;
+    font-weight: 500;
+    margin-right: 5px;
+}
+.ratings span{
+    color: rgb(97, 97, 97);
+    font-weight: 500;
+    font-size: medium;
 }
 .colors{
     display: flex;
@@ -26,6 +40,15 @@
 }
 .color_heading{
     display: block;
+    margin-bottom: 7px;
+    margin-top: 10px;
+}
+.size_title{
+    font-weight: 500;
+}
+.size_heading{
+    margin-bottom: 7px;
+    margin-top: 25px;
 }
 .color_icon{
     display: inline-block;
@@ -42,7 +65,6 @@
     height: 99%;    
 }
 .sizes{
-    margin-top: 20px;
     display: flex;
 }
 .size{
@@ -57,4 +79,33 @@
 }
 .size{
 
+}
+.price_details{
+    display: flex;
+    align-items: baseline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.price{
+    font-weight: 500;
+    font-size: 24px;
+    margin-right: 13px;
+}
+.discount{
+    color:rgb(45, 106, 2);
+    font-weight: 500;
+    font-size: large;
+}
+.mrp{
+    font-size: 18px;
+    color: rgb(78, 78, 78);
+    font-weight: 500;
+    text-decoration: line-through;
+    margin-right: 13px;
+}
+.color_title{
+    font-weight: 500;
+}
+.product_details{
+    margin-top: 20px;
 }
