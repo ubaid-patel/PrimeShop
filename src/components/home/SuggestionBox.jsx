@@ -11,4 +11,4 @@ function SuggestionBox({show}){
         </div>
     )
 }
-export default SuggestionBox
+export default SuggestionBox  

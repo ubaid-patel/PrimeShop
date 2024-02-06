@@ -3,7 +3,7 @@ import styles from '../../css/components/product/product_Info.module.css'
 import { getProduct, getRatings, normalizeProduct } from '../../services/productService'
 function ProductInfo() {
 
-    const product = normalizeProduct(getProduct(),[0,0]);
+    const product = normalizeProduct(getProduct(), [0, 0]);
     const ratings = getRatings();
     const [activeColor, setActiveColor] = useState("Navy")
     const [activeSize, setActiveSize] = useState(0)
@@ -11,16 +11,20 @@ function ProductInfo() {
         <div className={styles.info}>
             <h2 className={styles.title}>{product.title}</h2>
             <div className={styles.ratings}>
-                {ratings.star}
-                {Array.from({ length: 5 }, () => <img src={'/star.svg'} className={styles.star} />)}
-                {ratings.reviews} Reviews
+                <div>
+                    <span>{ratings.star.toFixed(1)}</span>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMiI+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTYuNSA5LjQzOWwtMy42NzQgMi4yMy45NC00LjI2LTMuMjEtMi44ODMgNC4yNTQtLjQwNEw2LjUuMTEybDEuNjkgNC4wMSA0LjI1NC40MDQtMy4yMSAyLjg4Mi45NCA0LjI2eiIvPjwvc3ZnPg==" />
+                </div>
+                <span>{ratings.reviews * 50} Ratings & {ratings.reviews} Reviews</span>
             </div>
-            <h2 className={styles.discount}>-{(((product.mrp - product.price) / product.mrp) * 100)}%</h2>
-            <h2 className={styles.price}>₹{product.price}</h2>
-            <span className={styles.mrp}>M.R.P: <span className={styles.mrp_span}>₹{product.mrp}</span></span>
+            <div className={styles.price_details}>
+                <span className={styles.price}>₹{product.price}</span>
+                <span className={styles.mrp}>₹{product.mrp}</span>
+                <span className={styles.discount}>{Math.ceil(((product.mrp - product.price) / product.mrp) * 100)}% off</span>
+            </div>
 
             <div className={styles.color_heading}>
-                Colour:<span className={styles.active_color}>
+                <span className={styles.color_title}>Colour:</span><span className={styles.active_color}>
                     {activeColor}
                 </span>
             </div>
@@ -35,23 +39,22 @@ function ProductInfo() {
                 }
             </div>
             <div className={styles.size_heading}>
-                Size: <span className={styles.active_size}>
-                    {activeSize} IN
+                <span className={styles.size_title}>Size:</span> <span className={styles.active_size}>
+                    {activeSize}
                 </span>
             </div>
             <div className={styles.sizes}>
                 {
                     product.variants[1].options.map((size) => {
                         return (
-                            <div className={styles.size} onClick={()=>setActiveSize(size)}>{size.name} IN</div>
+                            <div className={styles.size} onClick={() => setActiveSize(size)}>{size.name}</div>
                         )
                     })
                 }
             </div>
-            <div className={styles.productDetails}>
+            <div className={styles.product_details}>
                 {product.description}
             </div>
-
         </div>
     )
 }

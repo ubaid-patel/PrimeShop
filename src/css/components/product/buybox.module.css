@@ -1,47 +1,128 @@
-.buy_box{
+.buy_box {
     border: 1px solid rgb(162, 162, 162);
     min-height: 80vh;
     height: max-content;
     border-radius: 5px;
     padding: 5px;
     width: 20%;
+    margin-top: 12px;
+    margin-right: 3px;
 }
-.price{
 
+.price {
+    margin: 0px;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
-.delivery{
+
+.delivery {
     display: flex;
     flex-direction: column;
+    margin-bottom: 8px;
 }
-.delivery_day{
 
+.delivery_day {
+    font-weight: 500;
+    margin-bottom: 3px;
 }
-.delivery_validity{
 
-}
-.delivery_charges{
+.delivery_validity {}
 
+.delivery_charges {
+    color: rgb(5, 89, 224);
+    margin-bottom: 3px;
 }
-.add_cart,.buy_now{
+
+.stock {
+    color: green;
     display: block;
-    width: 80%;
-    border-radius: 15px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.add_cart,
+.buy_now {
+    display: block;
+    width: 90%;
+    border-radius: 4px;
     margin-top: 15px;
     border: none;
     padding: 8px;
-    
+    color: white;
+    font-weight: 500;
+    font-size: large;
+    display: block;
+    margin: auto;
 }
-.add_cart{
-   background-color: #FFD814;
+
+.add_cart {
+    background-color: #ff9f00;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
-.buy_now{
-    background: #FFA41C;
+
+.buttons {
+    text-align: center;
 }
-.add_wishlist{
-    padding: 5px;
+
+.buy_now {
+    display: flex;
+    align-items: flex-start;
+    background: #fb641b;
+    justify-content: center;
+}
+
+.buy_box span,
+.add_cart span {
+    margin-left: 5px;
+}
+
+.add_wishlist {
+    padding: 5px 0px;
     border: 1px solid black;
-    width: 70%;
+    width: 90%;
     margin: auto;
     text-align: center;
     border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secure_transaction {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    margin: 20px auto;
+    border-bottom: 1px solid rgb(148, 142, 142);
+    align-items: baseline;
+    justify-content: flex-start;
+    padding: 0px;
+}
+
+.secure_transaction img {
+    margin-right: 10px;
+    margin-bottom: -4px;
+}
+.secure_transaction div{
+    align-self: baseline;
+    margin: 0px;
+    margin-bottom: -2px;
+}
+
+.secure_transaction span {
+    background-color: rgb(156, 156, 206);
+    align-self: baseline;
+}
+
+.location {
+    color: rgb(5, 89, 224);
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
 }

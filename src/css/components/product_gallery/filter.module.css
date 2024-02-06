@@ -1,30 +1,106 @@
 .filters{
-    width: 220px;
-    background-color: white;
-    padding: 10px;
+    width: 240px;
+    background-color: white;   
 }
 .filter{
-    
-}
-.heading{
     display: flex;
     align-items: center;
-    width: 100%;
+    padding: 10px 14px;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    margin-top: 5px;
 }
-.heading button{
-    background-color: white;
-    border: none;
-    outline: none;
-    color: rgb(25, 134, 235);
-    text-align: right;
+.filter h3{
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0px;
+    flex: 3;
+}
+.filter img{
+    width: 22px;
+    height: 22px;
     display: block;
     flex: 1;
 }
-.heading h1{
+.options{
+    padding-bottom: 50px;
+}
+.heading{
+    display: flex;
+}
+.heading h2{
     font-weight: 500;
-    text-align: left;
-    flex: 1;
+    font-size: large;
+    flex: 60;
+    padding: 0px 14px;
+}
+.heading button{
+    display: block;
+    flex: 40;
+    background-color: transparent;
+    color: rgb(0, 123, 255);
+    border: none;
+    outline: none;
+    font-size: small;
+    font-weight: 600;
 }
 .price_range{
 
+}
+.price_title{
+    display: flex;
+}
+.price_title h3{
+    font-weight: 500;
+    font-size: large;
+    flex: 60;
+}
+.price_title button{
+    display: block;
+    flex: 40;
+    background-color: transparent;
+    color: rgb(0, 123, 255);
+    border: none;
+    outline: none;
+    font-size: small;
+    font-weight: 600;
+}
+.slider{
+    -webkit-appearance: none;
+    background-color: rgb(143, 141, 141);
+    height: 5px;
+    display: inline;
+    width: 50%;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1;
+}
+.selected_range{
+    background-color: rgb(52, 145, 237);
+    height: 6px;
+    width: 50%;
+    margin: auto;
+    margin-top: -10px;
+    position: absolute;
+    left: 25%;
+    z-index: 1000;
+}
+.slider::-webkit-slider-thumb,
+.slider::-moz-range-thumb,
+.slider::-ms-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(227, 219, 219);
+  }
+  
+.range_cont{
+    position: relative;
+    height: 50px;
+}
+.options{
+    padding:3px 14px;
+    margin-top: 2px;
+    padding-bottom: 50px;
 }

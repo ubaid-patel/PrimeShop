@@ -1,4 +1,4 @@
-.main{
+.main {
     width: 95%;
     position: absolute;
     left: 1%;
@@ -9,16 +9,28 @@
     border-radius: 5px;
     border: 1px solid grey;
 }
-.hide{
+
+.hide {
     display: none;
 }
-.suggestion{
+
+.suggestion {
     display: flex;
     align-items: center;
-}
-.icon{
+    padding: 2px 5px;
+    margin-bottom: 10px;
 
 }
-.title{
 
+.icon {
+    height: 18px;
+    width: 18px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 17px;
+    margin: 0px;
+    margin-left: 15px;
+    color: rgb(44, 44, 44);
 }
