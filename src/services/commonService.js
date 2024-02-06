@@ -57,7 +57,7 @@ export function getFooter() {
 export function performSearch(keyword){
     const obj  = {
         icon:"/search.svg",
-        title:"This is the main component the best and solid"
+        title:"this is the main component the best and solid"
     }
     return([obj,obj,obj,obj,obj,obj,obj])
 }

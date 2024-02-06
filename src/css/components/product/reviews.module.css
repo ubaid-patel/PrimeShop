@@ -1,13 +1,193 @@
-.reviews{
-    width: 100%;
+.reviews {
+    width: 90%;
     display: flex;
+    margin-left: 10px;
+    margin: auto;
 }
-.top_reviews{
 
+.review {
+    margin-bottom: 50px;
 }
-.summary{
 
+.top_reviews {
+    flex: 6;
 }
-.average_rating{
-    margin-right: 50px;
+
+.review_content {
+    margin-left: 120px;
+}
+
+.top_reviews h1 {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.summary {
+    flex: 2;
+}
+
+.summary h2 {
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0px;
+}
+
+.rating_heading {
+    display: flex;
+    align-items: center;
+}
+
+.average_rating {
+    margin-left: 10px;
+}
+
+.global_ratings {
+    font-weight: 500;
+    font-size: small;
+    color: grey;
+    margin: 5px 0px;
+    display: block;
+}
+
+.rating_perc {
+    display: block;
+    width: 90%;
+}
+
+.star_numer {
+    color: #005ccc;
+    width: 80px;
+    display: block;
+    flex: 2;
+}
+
+.star_perc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.percent_box {
+    width: 100%;
+    height: 20px;
+    border: 1px solid rgb(60, 60, 60);
+    background-color: rgb(220, 220, 220);
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 8;
+}
+
+.percent_fill {
+    background-color: rgb(226, 151, 3);
+    height: inherit;
+}
+
+.percent {
+    color: #005ccc;
+    margin-left: 10px;
+    flex: 2;
+}
+
+.get_review {
+    width: 90%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 20px;
+}
+
+.get_review h3 {
+    font-weight: 500;
+    font-size: medium;
+    margin: 0px;
+    margin-bottom: 2px;
+    margin-top: 10px;
+}
+
+.get_review span {
+    display: block;
+}
+
+.get_review button {
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px 20px;
+    width: 90%;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+
+.top_reviews h1 {
+    font-weight: 500;
+}
+
+.review {
+    width: 100%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.profile img {
+    width: 25px;
+    height: 25px;
+}
+
+.profile span {
+    margin-left: 10px;
+}
+
+.name {
+    margin-left: 15px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    height: 24px;
+}
+
+.rating h2 {
+    font-weight: 500;
+    font-size: medium;
+}
+
+.review_date {
+    color: rgb(83, 83, 83);
+    margin-bottom: 2px;
+}
+
+.verified {
+    font-weight: 500;
+    font-size: medium;
+    display: block;
+    color: rgb(218, 144, 7);
+    margin-bottom: 3px;
+}
+
+.review_disc {
+    margin-bottom: 5px;
+}
+
+.helpful {
+    border: none;
+    outline: none;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px 20px;
+    border-radius: 4px;
+}
+
+.report {
+    border: none;
+    outline: none;
+    padding: 5px 20px;
+    border-radius: 4px;
+    margin-left: 15px;
+    background-color: rgba(191, 191, 191, 0.699);
 }

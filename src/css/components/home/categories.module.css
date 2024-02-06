@@ -37,3 +37,11 @@
     font-size: var(--font-size-mini);
     display: block;
 }
+@media screen and (max-width:500px) {
+.main{
+    width: 100%;
+}
+.categories{
+    overflow: scroll;
+}
+}

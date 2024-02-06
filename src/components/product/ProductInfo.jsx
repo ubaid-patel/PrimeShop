@@ -55,7 +55,6 @@ function ProductInfo() {
             <div className={styles.product_details}>
                 {product.description}
             </div>
-
         </div>
     )
 }

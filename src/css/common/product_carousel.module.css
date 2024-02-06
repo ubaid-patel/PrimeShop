@@ -41,7 +41,6 @@
 
 .items {
     display: flex;
-
     overflow: hidden;
     width: 90%;
     }
@@ -50,4 +49,17 @@
 }
 .item:not(:first-child){
     margin-left: 20px;
+}
+@media screen and (max-width:500px) {
+    .main{
+        width: 100%;
+    }
+    .items{
+        overflow: scroll;
+        width: 98%;
+    }
+    .back,.forward{
+        display: none;
+    }
+
 }
