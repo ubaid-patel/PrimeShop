@@ -9,7 +9,7 @@
 }
 .image{
     width: 98%;
-    height: 250px;
+    height: 70%;
     display: block;
     margin: auto;
     border-radius: inherit;
@@ -39,4 +39,7 @@
 .discount{
     font-size: var(--font-size-smi);
     color: var(--color-darkgreen);
+}
+@media screen and (max-width:500px) {
+
 }

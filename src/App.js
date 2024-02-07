@@ -21,7 +21,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Home/>} />
+      <Route path="/"element={<div className={styles.home}><Home/></div>} />
       <Route path="/product/:pid" element={<div className={styles.product}><Product/></div>} />
       <Route path="/checkout/:pid" element={<div className={styles.checkout}><Checkout/></div>} />
       <Route path="/login" element={<div className={styles.login}><Login/></div>} />

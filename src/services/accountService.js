@@ -38,14 +38,14 @@ export function getSavedAddresses() {
 export function getAddresses() {
     const addressObj = {
         id: "ADR01ID",
-        type: "HOME",
+        type: "WORK",
         name: "Ubaid Patel",
         pincode: 585389,
-        address: "New area Gola K",
-        locality: "Gulbarga",
-        city: "Shahabad",
+        address: "Sun Mobility 2nd Doddanakundi industrian area",
+        locality: "Seetharam palya",
+        city: "Bengaluru",
         state: "Karnataka",
-        landmark: "Beside Panchayat Office",
+        landmark: "Near seetharam palya metro station",
         mobile: ["9148749147", "9035035517"]
     }
     return (addressObj)

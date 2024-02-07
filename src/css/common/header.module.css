@@ -1,7 +1,9 @@
 :root {
     --commongap: 105px;
   }
-  
+  .mob_header{
+    display: none;
+  }
   .header {
     max-width: 100%;
     box-sizing: border-box;
@@ -59,3 +61,42 @@
     margin-left: var(--commongap);
   }
   
+
+  /* Header for mobile device's */
+  @media screen and (max-width:500px) {
+    .header{
+      display: none;
+    }
+    .mob_header{
+        width: 100%;
+        padding: 5px 2px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+        z-index: 10;
+    }
+    .mob_logo{
+      width: 70%;
+    }
+    .mob_accountCircle{
+      width: 24px;
+      height: 24px;
+      margin-left: 30px;
+    }
+    .mob_cart{
+      width: 24px;
+      height: 24px;
+      margin-left: 20px;
+    }
+    .row_one{
+      display: flex;
+      align-items: center;
+    }
+    .searchBar{
+      width: 100%;
+      margin-left: 0px;
+    }
+  }

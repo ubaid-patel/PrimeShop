@@ -109,3 +109,9 @@
 .product_details{
     margin-top: 20px;
 }
+@media screen and (max-width:500px) {
+    .info{
+     width: 90%;
+     margin: auto;
+    }
+ }

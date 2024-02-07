@@ -50,3 +50,12 @@
     outline: 4px solid rgba(16, 166, 208, 0.312);
     /* box-shadow: 1px 1px 3px 0px rgb(40, 130, 255) ; */
 }
+@media screen and (max-width:500px) {
+    .gallery{
+        width: 98%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 60vh;
+    }
+}
