@@ -1,12 +1,23 @@
-.checkout,.login{
+.checkout,
+.login {
     background-color: white;
 }
-.products,.cart{
+
+.products,
+.cart {
     background-color: #f8f8f8;
 }
-.account{
+
+.account {
     background-color: #f8f8f8;
 }
-.cart{
-   min-height: 100vh;
+
+.cart {
+    min-height: 100vh;
+}
+
+@media screen and (max-width:500px) {
+    .home {
+        padding: 0px;
+    }
 }

@@ -13,14 +13,14 @@ function Product() {
     const pid = useParams();
     return (
         <React.Fragment>
-            <Header/>
+            <Header />
             <div className={styles.product}>
-            <ImageGallery />
-            <ProductInfo />
-            <BuyBox/>
-        </div>
-            <ProductCarousel items={getRecomendations("featured")} name={"Similar Products"}/>
-            <Reviews/>
+                <ImageGallery />
+                <ProductInfo />
+                <BuyBox />
+            </div>
+            <ProductCarousel items={getRecomendations("featured")} name={"Similar Products"} />
+            <Reviews />
         </React.Fragment>
     )
 }

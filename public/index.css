@@ -1,0 +1,23 @@
+/* For WebKit browsers (e.g., Chrome, Safari) */
+body::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+/* For Firefox */
+/* Note: In Firefox, you need to set this property on the root element */
+body {
+   
+    /* Hide horizontal scrollbar */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+/* For Microsoft Edge and Internet Explorer */
+/* Note: In IE, you need to set this property on the body element */

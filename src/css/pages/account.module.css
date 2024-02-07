@@ -123,3 +123,27 @@
 .logout h3:hover{
     color: rgb(0, 115, 255);
 }
+@media screen and (max-width:500px) {
+    .sidebar{
+        width: 90%;
+        margin-right: 0px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .main{
+        flex-direction: column;
+        width: 100%;
+    }
+    .displayer{
+        max-width: 90%;
+        margin-left: 0px;
+        margin: auto;
+        margin-top: 20px;
+        padding-left: 0px;
+        display: none;
+    }
+    .displayer input{
+        max-width: 80%;
+    }
+}

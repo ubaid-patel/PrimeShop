@@ -136,7 +136,6 @@
 }
 
 .address div {
-
     flex: 1;
 }
 
@@ -278,4 +277,41 @@
     text-align: left;
     margin-left: 20px;
     padding-left: 20px;
+}
+@media screen and (max-width:500px) {
+    .cart_page{
+        flex-direction: column;
+        width: 100%;
+        margin-right: 0px;
+        margin: auto;
+    }
+    .product{
+       height: 100vh;
+    }
+    .cart_contents{
+        width: 98%;
+    }
+    .price_breakup{
+        width: 100%;
+        margin: 0px;
+        margin: auto;
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 0px;
+    }
+    .price_breakup table{
+        display: none;
+    }
+    .savings{
+        display: none;
+    }
+    .price_breakup div:first-child{
+        display: none;
+    }
+    .place_order{
+        border-top:none;
+    }
+    .address div{
+        flex: 2;
+    }
 }

@@ -109,7 +109,8 @@
     margin-right: 10px;
     margin-bottom: -4px;
 }
-.secure_transaction div{
+
+.secure_transaction div {
     align-self: baseline;
     margin: 0px;
     margin-bottom: -2px;
@@ -125,4 +126,13 @@
     display: flex;
     align-items: center;
     margin-bottom: 3px;
+}
+
+
+
+@media screen and (max-width:500px) {
+    .buy_box {
+        width: 90%;
+        margin: auto;
+    }
 }
