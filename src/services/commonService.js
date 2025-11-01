@@ -56,8 +56,8 @@ export function getFooter() {
 }
 export function performSearch(keyword){
     const obj  = {
-        icon:"/search.svg",
-        title:"this is the main component the best and solid"
+        icon:"/pant.png",
+        title:"Jockers in pants and jeans"
     }
     return([obj,obj,obj,obj,obj,obj,obj])
 }
@@ -101,3 +101,28 @@ export function getStates(){
       ];
       return(indianStates)
 }
+
+function displayOneByOne(str, ref, time, type = "success") {
+  let i = 0;
+
+  if (type === "success") {
+    ref.current.style = "display:block;margin:0px;color:green";
+  } else {
+    ref.current.style = "display:block;margin:0px;color:red";
+  }
+
+  ref.current.innerHTML = "";
+
+  return new Promise(resolve => {
+    const intervalId = setInterval(() => {
+      if (i >= str.length) {
+        clearInterval(intervalId);
+        resolve();
+      } else {
+        ref.current.innerHTML += str.charAt(i);
+        i++;
+      }
+    }, time);
+  });
+}
+export { displayOneByOne };
