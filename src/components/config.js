@@ -61,4 +61,5 @@ const addressData = [
     }
 ]
 
-export {addressObj,addressData}
+const apiServer = "http://10.89.43.159:3001"
+export {addressObj,addressData,apiServer}

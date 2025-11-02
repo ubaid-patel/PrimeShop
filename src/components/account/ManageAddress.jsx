@@ -4,6 +4,8 @@ import { getSavedAddresses } from "../../services/accountService"
 import styles from '../../css/components/account/manage_address.module.css'
 import { Address } from "./Address"
 
+const data = JSON.parse(localStorage.getItem("data"));
+
 export default function ManageAddress() {
     
     return (
@@ -14,7 +16,7 @@ export default function ManageAddress() {
                     <span>ADD A NEW ADDRESS</span>
                 </button>
             <div className={styles.addresses}>
-                {getSavedAddresses().map(address => <Address address={address}/>)}
+                {data.user.address.map(address => <Address address={address}/>)}
             </div>
             <AddressForm/>
         </div>

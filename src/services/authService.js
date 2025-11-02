@@ -1,3 +1,4 @@
+import { apiServer } from "../components/config";
 
 export function signupUser(formData) {
     console.log("Signing up user with data:", formData);
@@ -14,7 +15,7 @@ export function signupUser(formData) {
     };
 
     const promise = new Promise((resolve, reject) => {
-        fetch("http://10.161.162.159:3001/auth/signup", requestOptions)
+        fetch(apiServer+"/auth/signup", requestOptions)
             .then((response) => response.text())
             .then((result) => resolve(JSON.parse(result)))
             .catch((error) => reject(JSON.parse(error)));
@@ -41,10 +42,10 @@ export function loginUser(userId, password) {
 
 
     const promise = new Promise((resolve, reject) => {
-        fetch("http://10.161.162.159:3001/auth/login", requestOptions)
+        fetch(apiServer+"/auth/login", requestOptions)
             .then((response) => response.text())
             .then((result) => {
-                localStorage.setItem("data", JSON.parse(result));
+                localStorage.setItem("data", JSON.stringify(JSON.parse(result)));
                 resolve(JSON.parse(result));})
             .catch((error) => reject(JSON.parse(error)));
     });
@@ -52,5 +53,10 @@ export function loginUser(userId, password) {
 }
 
 export function isUserSignedIn() {
-    return (false)
+    let data = localStorage.getItem("data");
+    if (data) {
+        return (true)
+    }else{
+        return (false)
+    }
 }
