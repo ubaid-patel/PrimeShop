@@ -1,16 +1,17 @@
 import React, { Component, useEffect, useRef, useState } from "react";
 import styles from '../../css/components/home/carousel.module.css'
-import { getCarousel } from "../../services/homeService";
+import { getAppSettings, getCarousel } from "../../services/homeService";
 const carouselBtn = 'next1.svg';
 
-function Carousel() {
+async function Carousel() {
     const carouselItemsRef = useRef(null);
     const index = useRef(0);
     const indicator = useRef(0)
     const indicatorsRef = useRef(null);
     const offset = useRef(0);
     const autoScroll = useRef({ done: false, id: null })
-    const items = getCarousel();
+    const items =  await getAppSettings().then(settings => { return settings.carousel; })
+    console.log(items);
     const touchRef = useRef(0);
 
 
