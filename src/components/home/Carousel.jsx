@@ -1,17 +1,26 @@
 import React, { Component, useEffect, useRef, useState } from "react";
 import styles from '../../css/components/home/carousel.module.css'
 import { getAppSettings, getCarousel } from "../../services/homeService";
+import { use } from "react";
 const carouselBtn = 'next1.svg';
 
-async function Carousel() {
+function Carousel() {
     const carouselItemsRef = useRef(null);
     const index = useRef(0);
     const indicator = useRef(0)
     const indicatorsRef = useRef(null);
     const offset = useRef(0);
     const autoScroll = useRef({ done: false, id: null })
-    const items =  await getAppSettings().then(settings => { return settings.carousel; })
-    console.log(items);
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        async function loadData() {
+            const data = await getCarousel();
+            console.log(data);
+            setItems(data);
+        }
+        loadData();
+    }, []);
     const touchRef = useRef(0);
 
 
@@ -45,10 +54,21 @@ async function Carousel() {
                     let curroffset = elem.offsetWidth;
                     elem.remove();
                     offset.current += curroffset;
-                    carouselItemsRef.current.insertBefore(elem, carouselItemsRef.current.children[totalitems - 1])
-                    carouselItemsRef.current.style = `transition:0s;transform: translateX(${offset.current}px)`
-                    resolve(-carouselItemsRef.current.children[index.current - 1].offsetWidth);
+                    carouselItemsRef.current.insertBefore(
+                        elem,
+                        carouselItemsRef.current.children[totalitems - 1]
+                    );
+                    carouselItemsRef.current.style = `transition:0s;transform: translateX(${offset.current}px)`;
+
+                    const safePrev =
+                        carouselItemsRef.current.children[index.current - 1] ||
+                        carouselItemsRef.current.children[
+                        carouselItemsRef.current.children.length - 1
+                        ];
+
+                    resolve(-safePrev.offsetWidth);
                 }
+
             }).then(
                 (currOffset) => {
                     offset.current += currOffset;
@@ -115,7 +135,7 @@ async function Carousel() {
                 </div>
                 <div className={styles.carousel_items} ref={carouselItemsRef}>
                     {
-                        items.map((item) =><img src={item.img} />)
+                        items.map((item) => <img key={item.id} src={item.img} alt="carousel" />)
                     }
                 </div>
 
@@ -123,8 +143,8 @@ async function Carousel() {
             <div className={styles.indicators} ref={indicatorsRef}>
                 {
 
-                    items.map((a, index) => (index === 0) ? <div className={`${styles.indicator} ${styles.active}`} /> :
-                        <div className={styles.indicator} />)
+                    items.map((a, index) => (index === 0) ? <div className={`${styles.indicator} ${styles.active}`} key={index} /> :
+                        <div className={styles.indicator} key={index} />)
                 }
             </div>
         </div>

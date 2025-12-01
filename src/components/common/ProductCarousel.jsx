@@ -1,7 +1,8 @@
-const  arrowImg = '/arrow-back-ios-new.svg';
+const  arrowImg = apiServer+'/images/arrow-back-ios-new.svg';
 import { useNavigate } from 'react-router-dom';
 import styles from '../../css/common/product_carousel.module.css'
 import ProductCard from './ProductCard'
+import { apiServer } from '../config';
 function ProductCarousel({ items,name }) {
     const nav = useNavigate()
     return (
