@@ -64,10 +64,10 @@
     width: 99%;
     height: 99%;    
 }
-.sizes{
+.variants{
     display: flex;
 }
-.size{
+.variant{
     display: inline-flex;
     height: 50px;
     width: 200px;

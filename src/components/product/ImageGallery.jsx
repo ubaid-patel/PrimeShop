@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import styles from '../../css/components/product/gallery.module.css'
 
-function ImageGallery(){
-    const images = ['/carou1.jpg','/carou2.jpg','/carou3.jpg','/carou1.jpg','/carou2.jpg','/carou3.jpg','/carou1.jpg','/carou2.jpg','/carou3.jpg']
+function ImageGallery({images}){
     const [activeIndex,setActiveIndex] = useState(0);
     return(
         <div className={styles.gallery}>
